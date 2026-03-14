@@ -57,16 +57,13 @@
 
     /* ── LAYOUT ── */
     .container {
-      max-width: 920px;
+      max-width: 860px;
       margin: 32px auto;
       padding: 0 16px;
-      display: grid;
-      grid-template-columns: 1fr 300px;
-      gap: 24px;
-      align-items: start;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
     }
-    .main  { display: flex; flex-direction: column; gap: 24px; }
-    .aside { display: flex; flex-direction: column; gap: 24px; }
 
     /* ── CARD ── */
     .card {
@@ -89,27 +86,12 @@
     /* ── SUMMARY ── */
     .summary p { color: var(--muted); }
 
-    /* ── HIGHLIGHTS ── */
-    .highlights ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-    .highlights li {
-      padding-left: 20px;
-      position: relative;
-      color: var(--muted);
-    }
-    .highlights li::before {
-      content: '▸';
-      position: absolute;
-      left: 0;
-      color: var(--primary);
-      font-size: .85rem;
-      top: 2px;
-    }
-
     /* ── EXPERIENCE ── */
     .job { margin-bottom: 22px; }
     .job:last-child { margin-bottom: 0; }
     .job-header { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px; }
     .job-title { font-weight: 700; font-size: .97rem; }
+    .job-subtitle { font-size: .85rem; color: var(--muted); margin-top: 1px; }
     .job-company { color: var(--primary); font-weight: 600; }
     .job-period {
       font-size: .8rem;
@@ -119,7 +101,7 @@
     .job ul { margin-top: 8px; list-style: none; display: flex; flex-direction: column; gap: 6px; }
     .job li { padding-left: 18px; position: relative; color: var(--muted); font-size: .92rem; }
     .job li::before {
-      content: '•';
+      content: '-';
       position: absolute;
       left: 0;
       color: var(--primary);
@@ -153,17 +135,14 @@
     .edu-item .degree { font-weight: 700; font-size: .93rem; }
     .edu-item .institution { color: var(--muted); font-size: .87rem; margin-top: 2px; }
 
-    /* ── LANGUAGE / EVENTS ── */
-    .lang-item, .event-item { margin-bottom: 10px; }
-    .lang-item:last-child, .event-item:last-child { margin-bottom: 0; }
+    /* ── LANGUAGE ── */
+    .lang-item { margin-bottom: 10px; }
+    .lang-item:last-child { margin-bottom: 0; }
     .lang-item .lang { font-weight: 700; font-size: .93rem; }
     .lang-item .level { color: var(--muted); font-size: .87rem; margin-top: 2px; }
-    .event-item .event-name { font-weight: 700; font-size: .93rem; }
-    .event-item .event-desc { color: var(--muted); font-size: .87rem; margin-top: 2px; }
 
     /* ── RESPONSIVE ── */
     @media (max-width: 700px) {
-      .container { grid-template-columns: 1fr; }
       header h1 { font-size: 1.6rem; }
     }
 
@@ -191,8 +170,8 @@
 
       body {
         background: #fff;
-        font-size: 10pt;
-        line-height: 1.45;
+        font-size: 9.5pt;
+        line-height: 1.4;
         color: #000;
       }
 
@@ -200,82 +179,74 @@
         background: #0a66c2 !important;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
-        padding: 14px 16px 12px;
+        padding: 12px 16px 10px;
       }
-      header h1 { font-size: 1.5rem; }
-      header .role { font-size: .95rem; margin-top: 3px; }
-      .contact { gap: 8px 18px; margin-top: 10px; font-size: .8rem; }
+      header h1 { font-size: 1.4rem; }
+      header .role { font-size: .9rem; margin-top: 2px; }
+      .contact { gap: 6px 16px; margin-top: 8px; font-size: .78rem; }
       .contact a { color: #cce0ff !important; }
 
-      /* Keep two-column grid layout */
       .container {
-        display: grid;
-        grid-template-columns: 1fr 240px;
-        gap: 14px;
         max-width: 100%;
-        margin: 8px 0 0;
+        margin: 6px 0 0;
         padding: 0;
+        gap: 6px;
       }
-      .main { gap: 10px; }
-      .aside { gap: 10px; }
 
       .card {
         box-shadow: none;
         border-radius: 0;
         border: none;
         border-bottom: 1px solid #dde3ef;
-        padding: 8px 10px;
+        padding: 6px 10px;
       }
       .card:last-child { border-bottom: none; }
       .card h2 {
-        font-size: .8rem;
-        padding-bottom: 4px;
-        margin-bottom: 8px;
+        font-size: .75rem;
+        padding-bottom: 3px;
+        margin-bottom: 6px;
       }
 
       /* Summary */
-      .summary p { font-size: .88rem; }
-
-      /* Highlights */
-      .highlights ul { gap: 5px; }
-      .highlights li { font-size: .88rem; }
+      .summary p { font-size: .85rem; }
 
       /* Experience */
-      .job { margin-bottom: 10px; }
-      .job ul { gap: 3px; }
-      .job li { font-size: .87rem; }
-      .job-divider { margin: 8px 0; }
-      .job-title { font-size: .9rem; }
+      .job { margin-bottom: 8px; }
+      .job ul { gap: 2px; }
+      .job li { font-size: .83rem; }
+      .job-divider { margin: 6px 0; }
+      .job-title { font-size: .87rem; }
+      .job-subtitle { font-size: .8rem; }
 
       /* Tags */
-      .tag-group { margin-bottom: 8px; }
-      .tag-group .label { font-size: .78rem; margin-bottom: 4px; }
-      .tags { gap: 4px; }
+      .tag-group { margin-bottom: 6px; }
+      .tag-group .label { font-size: .72rem; margin-bottom: 3px; }
+      .tags { gap: 3px; }
       .tag {
         background: #e8f0fc !important;
         color: #1a4a8a !important;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
         border: 1px solid #c5d8f8;
-        font-size: .78rem;
-        padding: 2px 8px;
+        font-size: .72rem;
+        padding: 1px 6px;
       }
 
       /* Education */
-      .edu-item { margin-bottom: 8px; }
-      .edu-item .degree { font-size: .88rem; }
-      .edu-item .institution { font-size: .82rem; }
+      .edu-item { margin-bottom: 6px; }
+      .edu-item .degree { font-size: .85rem; }
+      .edu-item .institution { font-size: .78rem; }
 
-      /* Languages / Events */
-      .lang-item, .event-item { margin-bottom: 6px; }
-      .lang-item .lang, .event-item .event-name { font-size: .88rem; }
-      .lang-item .level, .event-item .event-desc { font-size: .82rem; }
+      /* Languages */
+      .lang-item { margin-bottom: 4px; }
+      .lang-item .lang { font-size: .85rem; }
+      .lang-item .level { font-size: .78rem; }
 
       a { color: inherit !important; text-decoration: none; }
 
       @page {
         size: A4;
-        margin: 1.2cm 1.4cm;
+        margin: 1cm 1.2cm;
       }
     }
   </style>
@@ -295,354 +266,301 @@
     </div>
     <div class="pdf-action">
       <button class="btn-pdf" id="btn-pdf" aria-label="Baixar currículo em PDF">
-        ⬇ Baixar PDF
+        Baixar PDF
       </button>
     </div>
   </header>
 
   <div class="container">
 
-    <!-- LEFT / MAIN COLUMN -->
-    <div class="main">
+    <!-- RESUMO PROFISSIONAL -->
+    <section class="card summary">
+      <h2>Resumo Profissional</h2>
+      <p>
+        Desenvolvedor iOS Sênior com mais de 8 anos de experiência em iOS apps nativos para bancos e grandes
+        empresas (Itaú, Santander, Natura). Especialista em Swift, Objective-C, UIKit, SwiftUI e iOS SDK, com
+        arquiteturas MVVM-C e Clean Architecture, unit tests (XCTest), CI/CD (Jenkins/GitHub Actions) e
+        observabilidade (Datadog, Crashlytics). Experiência em apps bancários, Open Finance e modularização,
+        com entregas na App Store e TestFlight.
+      </p>
+    </section>
 
-      <!-- RESUMO -->
-      <section class="card summary">
-        <h2>Resumo Profissional</h2>
-        <p>
-          Desenvolvedor iOS Sênior com mais de 8 anos de experiência em desenvolvimento de
-          iOS apps nativos para grandes empresas e bancos (Itaú, Santander, Natura). Especialista
-          em Swift, UIKit, SwiftUI, MVVM-C e Clean Architecture, com sólida atuação em ambientes
-          de alta criticidade, segurança e escalabilidade. Histórico comprovado de entrega com
-          qualidade: unit tests (XCTest), CI/CD pipeline (Jenkins/Github Action), observabilidade (DataDog,
-          Crashlytics, Appdynamic) e evolução de legados Objective-C para Swift. Experiência em contextos
-          fintech e Open Finance, com foco em modularização, App Store e experiência do usuário.
-        </p>
-      </section>
+    <!-- COMPETÊNCIAS TÉCNICAS -->
+    <section class="card">
+      <h2>Competências Técnicas</h2>
 
-      <!-- DESTAQUES DE IMPACTO -->
-      <section class="card highlights">
-        <h2>Destaques de Impacto</h2>
+      <div class="tag-group">
+        <div class="label">Linguagens</div>
+        <div class="tags">
+          <span class="tag">Swift</span>
+          <span class="tag">Objective-C</span>
+          <span class="tag">Java</span>
+        </div>
+      </div>
+
+      <div class="tag-group">
+        <div class="label">Frameworks iOS</div>
+        <div class="tags">
+          <span class="tag">UIKit</span>
+          <span class="tag">SwiftUI</span>
+          <span class="tag">iOS SDK</span>
+          <span class="tag">Xcode</span>
+          <span class="tag">ViewCode</span>
+          <span class="tag">AutoLayout</span>
+          <span class="tag">CoreLocation</span>
+          <span class="tag">MapKit</span>
+          <span class="tag">Core Data</span>
+          <span class="tag">Combine</span>
+          <span class="tag">Async/await</span>
+          <span class="tag">URLSession</span>
+        </div>
+      </div>
+
+      <div class="tag-group">
+        <div class="label">Arquitetura &amp; Design Patterns</div>
+        <div class="tags">
+          <span class="tag">MVVM-C</span>
+          <span class="tag">VIPER</span>
+          <span class="tag">VIP</span>
+          <span class="tag">MVI</span>
+          <span class="tag">Clean Architecture</span>
+          <span class="tag">SOLID</span>
+          <span class="tag">Coordinator</span>
+          <span class="tag">Builder</span>
+          <span class="tag">Strategy</span>
+          <span class="tag">Factory</span>
+        </div>
+      </div>
+
+      <div class="tag-group">
+        <div class="label">Qualidade &amp; CI/CD</div>
+        <div class="tags">
+          <span class="tag">XCTest</span>
+          <span class="tag">XCUITest</span>
+          <span class="tag">TDD</span>
+          <span class="tag">Code Review</span>
+          <span class="tag">Jenkins</span>
+          <span class="tag">GitHub Actions</span>
+          <span class="tag">Fastlane</span>
+          <span class="tag">TestFlight</span>
+          <span class="tag">App Store Connect</span>
+        </div>
+      </div>
+
+      <div class="tag-group">
+        <div class="label">Ferramentas &amp; Processo</div>
+        <div class="tags">
+          <span class="tag">Git</span>
+          <span class="tag">Gitflow</span>
+          <span class="tag">CocoaPods</span>
+          <span class="tag">SPM</span>
+          <span class="tag">REST APIs</span>
+          <span class="tag">JSON</span>
+          <span class="tag">Jira</span>
+          <span class="tag">Confluence</span>
+          <span class="tag">Scrum / Agile</span>
+          <span class="tag">Figma</span>
+        </div>
+      </div>
+
+      <div class="tag-group">
+        <div class="label">Observabilidade &amp; Acessibilidade</div>
+        <div class="tags">
+          <span class="tag">Datadog</span>
+          <span class="tag">Crashlytics</span>
+          <span class="tag">Firebase</span>
+          <span class="tag">VoiceOver</span>
+          <span class="tag">Dynamic Type</span>
+          <span class="tag">WCAG</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIÊNCIA PROFISSIONAL -->
+    <section class="card">
+      <h2>Experiência Profissional</h2>
+
+      <div class="job">
+        <div class="job-header">
+          <div>
+            <div class="job-company">Zup Innovation</div>
+            <div class="job-title">Senior iOS Developer — App Bancário (Itaú) · Goiânia, GO / Remoto</div>
+            <div class="job-subtitle">Mobile Developer Specialist</div>
+          </div>
+          <span class="job-period">mar/2022 – fev/2026</span>
+        </div>
         <ul>
-          <li>Orquestração de jornadas de segurança e identidade no Itaú para mais de 5 milhões de clientes ativos no iOS app.</li>
-          <li>Implantação de observabilidade e analytics (DataDog) para monitoramento proativo, reduzindo em 30% o MTTR de incidentes em produção.</li>
-          <li>Elevação de cobertura de testes unitários (XCTest) de &lt;40% para acima de 75% em módulos críticos da aplicação bancária.</li>
-          <li>Entrega de CI/CD pipeline robusto Gitflow, aumentando a frequência de deploys com zero regressões.</li>
-          <li>Implementação de acessibilidade (WCAG / VoiceOver) em componentes iOS SDK, ampliando alcance do app a usuários PCD.</li>
+          <li>Desenvolvimento de jornadas de segurança e identidade no iOS app do Itaú para mais de 5 milhões de clientes ativos, usando Swift, UIKit, MVVM-C e ViewCode em arquitetura modular.</li>
+          <li>Instrumentação de observabilidade com Datadog e Crashlytics, permitindo alertas proativos e redução de 30% no MTTR de incidentes em produção.</li>
+          <li>Elevação de cobertura de unit tests (XCTest) de menos de 40% para 75% em módulos críticos, aplicando TDD e padrões Strategy, Builder e Coordinator.</li>
+          <li>Evolução da CI/CD pipeline com Jenkins e Gitflow, reduzindo o ciclo de entrega e garantindo qualidade via gates automatizados de testes e code review.</li>
+          <li>Implementação de acessibilidade (VoiceOver, Dynamic Type, WCAG AA) em toda a camada de UI nativa iOS SDK, ampliando o alcance do App Store para usuários PCD.</li>
         </ul>
-      </section>
+      </div>
 
-      <!-- EXPERIÊNCIA -->
-      <section class="card">
-        <h2>Experiência Profissional</h2>
+      <hr class="job-divider" />
 
-        <div class="job">
-          <div class="job-header">
-            <div>
-              <div class="job-company">Zup Innovation</div>
-              <div class="job-title">DMobile Developer Specialist — App Bancário (Itaú) · Goiânia, GO / Remoto</div>
-            </div>
-            <span class="job-period">mar/2022 – fev/2026</span>
+      <div class="job">
+        <div class="job-header">
+          <div>
+            <div class="job-company">Hexacta</div>
+            <div class="job-title">Desenvolvedor iOS Sênior — Open Finance (Banco Modal) · Remoto</div>
           </div>
-          <ul>
-            <li>Desenvolvimento de jornadas de segurança e identidade no iOS app do Itaú, servindo mais de 5 milhões de clientes ativos no iPhone, utilizando modularização com Swift, UIKit e MVVM-C com ViewCode.</li>
-            <li>Instrumentação de observabilidade com DataDog e Crashlytics, permitindo alertas proativos e redução de 30% no tempo médio de resolução (MTTR) de incidentes em produção.</li>
-            <li>Elevação de cobertura de unit tests (XCTest) de &lt;40% para 75%+ em módulos críticos, aplicando Test-Driven Development e padrões Strategy, Builder e Coordinator.</li>
-            <li>Evolução da CI/CD pipeline com Jenkins e Gitflow, reduzindo ciclo de entrega de funcionalidades e garantindo qualidade via gates automatizados de testes e code review.</li>
-            <li>Implementação de acessibilidade (VoiceOver, Dynamic Type, contraste WCAG AA) em toda a camada de UI nativa, ampliando o alcance do App Store para usuários PCD.</li>
-          </ul>
+          <span class="job-period">jul/2021 – mar/2022</span>
         </div>
+        <ul>
+          <li>Desenvolvimento de módulos iOS nativos com Swift, UIKit, MVVM-C e RxSwift para o projeto de Open Finance do Banco Modal, integrando REST APIs e fluxos de consentimento.</li>
+          <li>Implementação de camada de segurança e autenticação OAuth 2.0 no iOS app, seguindo padrões do Banco Central para Open Banking.</li>
+          <li>Criação de unit tests e testes de integração com XCTest, atingindo cobertura de 70% nos fluxos críticos de transferência e compartilhamento de dados.</li>
+          <li>Colaboração com time multidisciplinar (backend, produto, design) em metodologia Scrum, entregando sprints quinzenais com qualidade via TestFlight.</li>
+        </ul>
+      </div>
 
-        <hr class="job-divider" />
+      <hr class="job-divider" />
 
-        <div class="job">
-          <div class="job-header">
-            <div>
-              <div class="job-company">Hexacta</div>
-              <div class="job-title">Desenvolvedor iOS Sênior — Open Finance (Banco Modal) · Remoto</div>
-            </div>
-            <span class="job-period">jul/2021 – mar/2022</span>
+      <div class="job">
+        <div class="job-header">
+          <div>
+            <div class="job-company">E-Deploy</div>
+            <div class="job-title">Desenvolvedor iOS — App de Consultoras (Natura) · Goiânia, GO</div>
           </div>
-          <ul>
-            <li>Desenvolvimento de módulos iOS nativos (Swift, UIKit, MVVM-C, RxSwift) para o projeto de Open Finance do Banco Modal, integrando REST APIs e fluxos de consentimento de dados do cliente.</li>
-            <li>Implementação de camada de segurança e autenticação OAuth 2.0 no iOS app, seguindo padrões do Banco Central para Open Banking.</li>
-            <li>Criação de testes unitários e de integração com XCTest, atingindo cobertura de 70%+ nos fluxos críticos de transferência e compartilhamento de dados.</li>
-            <li>Colaboração com time multidisciplinar (backend, produto, design) usando Jira e metodologia Scrum, entregando sprints com cadência quinzenal.</li>
-          </ul>
+          <span class="job-period">nov/2020 – jul/2021</span>
         </div>
+        <ul>
+          <li>Sustentação e evolução do iOS app Natura para rede de mais de 1 milhão de consultoras, garantindo estabilidade com Crashlytics e ciclos de hotfix via TestFlight.</li>
+          <li>Migração progressiva de módulos legados de Objective-C para Swift, reduzindo crashes em 25% e melhorando o tempo de carregamento das telas principais.</li>
+          <li>Adoção de VIPER e Clean Architecture para novos módulos, aumentando a testabilidade com XCTest e facilitando onboarding de novos desenvolvedores.</li>
+        </ul>
+      </div>
 
-        <hr class="job-divider" />
+      <hr class="job-divider" />
 
-        <div class="job">
-          <div class="job-header">
-            <div>
-              <div class="job-company">E-Deploy</div>
-              <div class="job-title">Desenvolvedor iOS — App de Consultoras (Natura) · Goiânia, GO</div>
-            </div>
-            <span class="job-period">nov/2020 – jul/2021</span>
+      <div class="job">
+        <div class="job-header">
+          <div>
+            <div class="job-company">Try Consultoria</div>
+            <div class="job-title">Desenvolvedor iOS — Design System (Banco Santander) · Remoto</div>
           </div>
-          <ul>
-            <li>Sustentação e evolução do iOS app Natura para rede de mais de 1 milhão de consultoras, garantindo estabilidade com Crashlytics e ciclos de hotfix ágeis.</li>
-            <li>Modernização de módulos legados com migração progressiva de Objective-C para Swift, reduzindo crashes em 25% e melhorando tempo de carregamento das telas principais.</li>
-            <li>Adoção de VIPER e Clean Architecture para novos módulos, aumentando testabilidade e facilitando onboarding de novos desenvolvedores.</li>
-          </ul>
+          <span class="job-period">jul/2020 – out/2020</span>
         </div>
+        <ul>
+          <li>Desenvolvimento de componentes UIKit reutilizáveis para o Design System do Banco Santander, com suporte a Dark Mode e Dynamic Type a partir de especificações Figma.</li>
+          <li>Criação de biblioteca de componentes com Swift Package Manager (SPM), facilitando o reuso em múltiplos iOS apps da instituição.</li>
+          <li>Escrita de unit tests (XCTest) para garantir consistência visual e comportamental dos componentes iOS SDK.</li>
+        </ul>
+      </div>
 
-        <hr class="job-divider" />
+      <hr class="job-divider" />
 
-        <div class="job">
-          <div class="job-header">
-            <div>
-              <div class="job-company">Try Consultoria</div>
-              <div class="job-title">Desenvolvedor iOS — Design System (Banco Santander) · Remoto</div>
-            </div>
-            <span class="job-period">jul/2020 – out/2020</span>
+      <div class="job">
+        <div class="job-header">
+          <div>
+            <div class="job-company">Supera Tecnologia</div>
+            <div class="job-title">Desenvolvedor Full Stack / Mobile — App de Transporte · Goiânia, GO</div>
           </div>
-          <ul>
-            <li>Desenvolvimento de componentes iOS nativos para o Design System do Banco Santander, traduzindo especificações Figma em UIKit reutilizável com suporte a Dark Mode e Dynamic Type.</li>
-            <li>Criação de biblioteca de componentes com Swift Package Manager (SPM), facilitando o reuso em múltiplos apps da instituição.</li>
-            <li>Documentação de API dos componentes e escrita de testes unitários (XCTest) para garantir consistência visual e comportamental.</li>
-          </ul>
+          <span class="job-period">ago/2018 – jul/2020</span>
         </div>
+        <ul>
+          <li>Desenvolvimento e lançamento no App Store do app oficial de transporte coletivo da Grande Goiânia (SiMRmtc), com rastreamento GPS em tempo real para dezenas de milhares de usuários diários.</li>
+          <li>Implementação de rastreamento com CoreLocation e MapKit, integrando REST APIs de geolocalização e reduzindo o tempo de atualização do mapa em 40%.</li>
+          <li>Desenvolvimento mobile iOS com Swift e UIKit, CI/CD via Jenkins, e persistência local com Core Data para funcionamento offline parcial.</li>
+        </ul>
+      </div>
 
-        <hr class="job-divider" />
+      <hr class="job-divider" />
 
-        <div class="job">
-          <div class="job-header">
-            <div>
-              <div class="job-company">Supera Tecnologia</div>
-              <div class="job-title">Desenvolvedor Full Stack / Mobile — App de Transporte · Goiânia, GO</div>
-            </div>
-            <span class="job-period">ago/2018 – jul/2020</span>
+      <div class="job">
+        <div class="job-header">
+          <div>
+            <div class="job-company">MoveJa Tecnologia</div>
+            <div class="job-title">Desenvolvedor Full Stack — Plataforma de Transporte · Goiânia, GO</div>
           </div>
-          <ul>
-            <li>Desenvolvimento e lançamento no App Store do app oficial de transporte coletivo da Grande Goiânia (SiMRmtc), utilizado por dezenas de milhares de usuários diários para consulta de linhas e GPS em tempo real.</li>
-            <li>Implementação de rastreamento de veículos com CoreLocation e integração de REST APIs de geolocalização, reduzindo o tempo de resposta da atualização de mapa em 40%.</li>
-            <li>Desenvolvimento backend com Java/Spring Boot e mobile iOS (Swift, UIKit), com CI/CD via Jenkins e gestão de código com Git/Gitflow.</li>
-            <li>Persistência local com Core Data e Cache para funcionamento offline parcial, melhorando a experiência do usuário em áreas com conectividade instável.</li>
-          </ul>
+          <span class="job-period">out/2017 – mai/2018</span>
         </div>
+        <ul>
+          <li>Desenvolvimento ponta a ponta de plataforma de transporte: iOS app nativo com Swift e UIKit, backend REST (Node.js) e painel web, conectando motoristas e passageiros.</li>
+          <li>Publicação do iOS app na App Store com fluxo completo de App Store Connect, TestFlight e aprovação de review da Apple.</li>
+        </ul>
+      </div>
 
-        <hr class="job-divider" />
+      <hr class="job-divider" />
 
-        <div class="job">
-          <div class="job-header">
-            <div>
-              <div class="job-company">MoveJa Tecnologia</div>
-              <div class="job-title">Desenvolvedor Full Stack — Plataforma de Transporte · Goiânia, GO</div>
-            </div>
-            <span class="job-period">out/2017 – mai/2018</span>
+      <div class="job">
+        <div class="job-header">
+          <div>
+            <div class="job-company">Construtora Norberto Odebrecht</div>
+            <div class="job-title">Analista de Sistemas / Infraestrutura</div>
           </div>
-          <ul>
-            <li>Desenvolvimento ponta a ponta de plataforma de transporte privado: iOS app nativo (Swift, UIKit), backend REST (Node.js) e painel web, conectando motoristas e passageiros.</li>
-            <li>Publicação do iOS app na App Store com fluxo completo de App Store Connect, TestFlight e aprovação de review da Apple.</li>
-          </ul>
+          <span class="job-period">dez/2008 – ago/2017</span>
         </div>
+        <ul>
+          <li>Desenvolvimento e manutenção de sistemas internos corporativos com Java, apoio a engenharia e gestão de infraestrutura de TI em projetos de grande porte no Brasil.</li>
+          <li>Automação de processos internos com scripts e ferramentas de monitoramento, reduzindo retrabalho e tempo de resposta a incidentes de infraestrutura.</li>
+        </ul>
+      </div>
 
-        <hr class="job-divider" />
+    </section>
 
-        <div class="job">
-          <div class="job-header">
-            <div>
-              <div class="job-company">Construtora Norberto Odebrecht</div>
-              <div class="job-title">Analista de Sistemas / Infraestrutura</div>
-            </div>
-            <span class="job-period">dez/2008 – ago/2017</span>
+    <!-- PROJETOS RELEVANTES -->
+    <section class="card">
+      <h2>Projetos Relevantes</h2>
+
+      <div class="job">
+        <div class="job-header">
+          <div>
+            <div class="job-company">SiMRmtc — App de Transporte Coletivo</div>
+            <div class="job-title">iOS App · Supera Tecnologia</div>
           </div>
-          <ul>
-            <li>Desenvolvimento e manutenção de sistemas internos corporativos, apoio a ehgenharia e gestão de infraestrutura de TI em projetos de grande porte no Brasil.</li>
-            <li>Automação de processos internos com scripts e ferramentas de monitoramento, reduzindo retrabalho e tempo de resposta a incidentes de infraestrutura.</li>
-          </ul>
+          <span class="job-period">2018 – 2020</span>
         </div>
+        <ul>
+          <li>App oficial de transporte coletivo da Região Metropolitana de Goiânia disponível no App Store e Google Play, com rastreamento GPS em tempo real usando CoreLocation e MapKit.</li>
+          <li>Tecnologias: Swift, UIKit, CoreLocation, MapKit, Core Data, REST APIs, Jenkins, Git.</li>
+        </ul>
+      </div>
 
-      </section>, 
+      <hr class="job-divider" />
 
-      <!-- PROJETOS RELEVANTES -->
-      <section class="card">
-        <h2>Projetos Relevantes</h2>
-
-        <div class="job">
-          <div class="job-header">
-            <div>
-              <div class="job-company">SiMRmtc — App de Transporte Coletivo</div>
-              <div class="job-title">iOS App · Supera Tecnologia</div>
-            </div>
-            <span class="job-period">2018 – 2020</span>
+      <div class="job">
+        <div class="job-header">
+          <div>
+            <div class="job-company">Hackinnovation Mobinova — Mobilidade Sustentável</div>
+            <div class="job-title">Hackathon · Goiânia, GO</div>
           </div>
-          <ul>
-            <li>App oficial de transporte coletivo da Região Metropolitana de Goiânia, disponível no App Store e Google Play, com rastreamento GPS em tempo real, consulta de linhas e horários para dezenas de milhares de usuários diários.</li>
-            <li>Tecnologias:Java, Swift, UIKit, CoreLocation, MapKit, Core Data, REST APIs, JSON, Jenkins, Git.</li>
-          </ul>
+          <span class="job-period">2019</span>
         </div>
+        <ul>
+          <li>Proposta premiada de solução para mobilidade coletiva com protótipo de iOS app integrando rotas multimodais usando Swift, UIKit e MapKit.</li>
+        </ul>
+      </div>
 
-        <hr class="job-divider" />
+    </section>
 
-        <div class="job">
-          <div class="job-header">
-            <div>
-              <div class="job-company">Mutirão Tech — Solução com IA para Descarte Irregular</div>
-              <div class="job-title">Hackathon · Goiânia, GO</div>
-            </div>
-            <span class="job-period">2023</span>
-          </div>
-          <ul>
-            <li>Desenvolvimento de solução com Inteligência Artificial para identificação de pontos de descarte irregular de resíduos via imagens de satélite.</li>
-            <li>Tecnologias: Python, DJango, REST APIs, JSON.</li>
-          </ul>
-        </div>
+    <!-- FORMAÇÃO -->
+    <section class="card">
+      <h2>Formação</h2>
+      <div class="edu-item">
+        <div class="degree">MBA em Gestão da TI</div>
+        <div class="institution">FGV</div>
+      </div>
+      <div class="edu-item">
+        <div class="degree">Bacharelado em Ciência da Computação</div>
+        <div class="institution">UNIP</div>
+      </div>
+    </section>
 
-        <hr class="job-divider" />
-
-        <div class="job">
-          <div class="job-header">
-            <div>
-              <div class="job-company">Hackinnovation Mobinova — Mobilidade Sustentável</div>
-              <div class="job-title">Hackathon · Goiânia, GO</div>
-            </div>
-            <span class="job-period">2019</span>
-          </div>
-          <ul>
-            <li>Proposta premiada de solução para mobilidade coletiva e sustentável, com protótipo de iOS app integrando rotas multimodais e incentivos gamificados para uso de transporte público.</li>
-            <li>Tecnologias: Swift, UIKit, MapKit, REST APIs.</li>
-          </ul>
-        </div>
-
-      </section>
-    </div><!-- /.main -->
-
-    <!-- RIGHT / ASIDE COLUMN -->
-    <div class="aside">
-
-      <!-- COMPETÊNCIAS -->
-      <section class="card">
-        <h2>Competências Técnicas</h2>
-
-        <div class="tag-group">
-          <div class="label">Linguagens</div>
-          <div class="tags">
-            <span class="tag">Swift</span>
-            <span class="tag">Objective-C</span>
-            <span class="tag">Java</span>
-          </div>
-        </div>
-
-        <div class="tag-group">
-          <div class="label">Frameworks iOS</div>
-          <div class="tags">
-            <span class="tag">UIKit</span>
-            <span class="tag">SwiftUI</span>
-            <span class="tag">iOS SDK</span>
-            <span class="tag">Xcode</span>
-            <span class="tag">ViewCode</span>
-            <span class="tag">AutoLayout</span>
-            <span class="tag">CoreLocation</span>
-            <span class="tag">MapKit</span>
-            <span class="tag">Core Data</span>
-            <span class="tag">Combine</span>
-            <span class="tag">Async/await</span>
-            <span class="tag">URLSession</span>
-          </div>
-        </div>
-
-        <div class="tag-group">
-          <div class="label">Arquitetura & Design Patterns</div>
-          <div class="tags">
-            <span class="tag">MVVM-C</span>
-            <span class="tag">VIPER</span>
-            <span class="tag">VIP</span>
-            <span class="tag">MVI</span>
-            <span class="tag">Clean Architecture</span>
-            <span class="tag">SOLID</span>
-            <span class="tag">Coordinator</span>
-            <span class="tag">Builder</span>
-            <span class="tag">Strategy</span>
-            <span class="tag">Builder</span>
-            <span class="tag">Factory</span>
-          </div>
-        </div>
-
-        <div class="tag-group">
-          <div class="label">Qualidade & CI/CD</div>
-          <div class="tags">
-            <span class="tag">XCTest</span>
-            <span class="tag">XCUITest</span>
-            <span class="tag">TDD</span>
-            <span class="tag">Code Review</span>
-            <span class="tag">Jenkins</span>
-            <span class="tag">Fastlane</span>
-            <span class="tag">TestFlight</span>
-            <span class="tag">App Store Connect</span>
-          </div>
-        </div>
-
-        <div class="tag-group">
-          <div class="label">Ferramentas & Processo</div>
-          <div class="tags">
-            <span class="tag">Git</span>
-            <span class="tag">Gitflow</span>
-            <span class="tag">CocoaPods</span>
-            <span class="tag">SPM</span>
-            <span class="tag">REST APIs</span>
-            <span class="tag">JSON</span>
-            <span class="tag">Jira</span>
-            <span class="tag">Confluence</span>
-            <span class="tag">Scrum / Agile</span>
-            <span class="tag">Figma</span>
-          </div>
-        </div>
-
-        <div class="tag-group">
-          <div class="label">Observabilidade & Acessibilidade</div>
-          <div class="tags">
-            <span class="tag">DataDog</span>
-            <span class="tag">Crashlytics</span>
-            <span class="tag">Firebase</span>
-            <span class="tag">VoiceOver</span>
-            <span class="tag">Dynamic Type</span>
-            <span class="tag">WCAG</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- FORMAÇÃO -->
-      <section class="card">
-        <h2>Formação</h2>
-        <div class="edu-item">
-          <div class="degree">MBA em Gestão da TI</div>
-          <div class="institution">FGV</div>
-        </div>
-        <div class="edu-item">
-          <div class="degree">Bacharelado em Ciência da Computação</div>
-          <div class="institution">UNIP</div>
-        </div>
-      </section>
-
-      <!-- IDIOMAS -->
-      <section class="card">
-        <h2>Idiomas</h2>
-        <div class="lang-item">
-          <div class="lang">Português</div>
-          <div class="level">Nativo</div>
-        </div>
-        <div class="lang-item">
-          <div class="lang">Inglês</div>
-          <div class="level">Técnico — leitura avançada de documentação</div>
-        </div>
-      </section>
-
-      <!-- EVENTOS & HACKATHONS -->
-      <section class="card">
-        <h2>Eventos & Hackathons</h2>
-        <div class="event-item">
-          <div class="event-name">Mutirão Tech</div>
-          <div class="event-desc">IA para identificação de descarte irregular via satélite — Swift, SwiftUI, Vision Framework.</div>
-        </div>
-        <div class="event-item">
-          <div class="event-name">Hackinnovation Mobinova</div>
-          <div class="event-desc">Solução premiada para mobilidade coletiva e sustentável — Swift, UIKit, MapKit.</div>
-        </div>
-      </section>
-
-    </div><!-- /.aside -->
+    <!-- IDIOMAS -->
+    <section class="card">
+      <h2>Idiomas</h2>
+      <div class="lang-item">
+        <div class="lang">Português</div>
+        <div class="level">Nativo</div>
+      </div>
+      <div class="lang-item">
+        <div class="lang">Inglês</div>
+        <div class="level">Técnico — leitura avançada de documentação</div>
+      </div>
+    </section>
 
   </div><!-- /.container -->
 
