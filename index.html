@@ -185,14 +185,14 @@
     }
     .btn-pdf:hover { background: rgba(255,255,255,.28); }
 
-    /* ── PRINT / PDF (ATS-friendly single-column layout) ── */
+    /* ── PRINT / PDF ── */
     @media print {
       .btn-pdf { display: none !important; }
 
       body {
         background: #fff;
-        font-size: 10.5pt;
-        line-height: 1.5;
+        font-size: 10pt;
+        line-height: 1.45;
         color: #000;
       }
 
@@ -200,42 +200,82 @@
         background: #0a66c2 !important;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
-        padding: 24px 16px 18px;
+        padding: 14px 16px 12px;
       }
+      header h1 { font-size: 1.5rem; }
+      header .role { font-size: .95rem; margin-top: 3px; }
+      .contact { gap: 8px 18px; margin-top: 10px; font-size: .8rem; }
       .contact a { color: #cce0ff !important; }
 
-      /* Flatten two-column grid into a single linear column */
+      /* Keep two-column grid layout */
       .container {
-        display: block;
+        display: grid;
+        grid-template-columns: 1fr 240px;
+        gap: 14px;
         max-width: 100%;
-        margin: 12px 0 0;
+        margin: 8px 0 0;
         padding: 0;
       }
-      .main, .aside { display: contents; }
+      .main { gap: 10px; }
+      .aside { gap: 10px; }
 
       .card {
         box-shadow: none;
         border-radius: 0;
         border: none;
         border-bottom: 1px solid #dde3ef;
-        padding: 14px 0;
-        break-inside: avoid;
+        padding: 8px 10px;
       }
       .card:last-child { border-bottom: none; }
+      .card h2 {
+        font-size: .8rem;
+        padding-bottom: 4px;
+        margin-bottom: 8px;
+      }
 
+      /* Summary */
+      .summary p { font-size: .88rem; }
+
+      /* Highlights */
+      .highlights ul { gap: 5px; }
+      .highlights li { font-size: .88rem; }
+
+      /* Experience */
+      .job { margin-bottom: 10px; }
+      .job ul { gap: 3px; }
+      .job li { font-size: .87rem; }
+      .job-divider { margin: 8px 0; }
+      .job-title { font-size: .9rem; }
+
+      /* Tags */
+      .tag-group { margin-bottom: 8px; }
+      .tag-group .label { font-size: .78rem; margin-bottom: 4px; }
+      .tags { gap: 4px; }
       .tag {
         background: #e8f0fc !important;
         color: #1a4a8a !important;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
         border: 1px solid #c5d8f8;
+        font-size: .78rem;
+        padding: 2px 8px;
       }
+
+      /* Education */
+      .edu-item { margin-bottom: 8px; }
+      .edu-item .degree { font-size: .88rem; }
+      .edu-item .institution { font-size: .82rem; }
+
+      /* Languages / Events */
+      .lang-item, .event-item { margin-bottom: 6px; }
+      .lang-item .lang, .event-item .event-name { font-size: .88rem; }
+      .lang-item .level, .event-item .event-desc { font-size: .82rem; }
 
       a { color: inherit !important; text-decoration: none; }
 
       @page {
         size: A4;
-        margin: 1.8cm 2cm;
+        margin: 1.2cm 1.4cm;
       }
     }
   </style>
