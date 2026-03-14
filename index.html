@@ -166,6 +166,78 @@
       .container { grid-template-columns: 1fr; }
       header h1 { font-size: 1.6rem; }
     }
+
+    /* ── PDF BUTTON ── */
+    .pdf-action { margin-top: 20px; }
+    .btn-pdf {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,255,255,.15);
+      color: #fff;
+      border: 1.5px solid rgba(255,255,255,.55);
+      padding: 8px 22px;
+      border-radius: 6px;
+      font-size: .88rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background .2s;
+    }
+    .btn-pdf:hover { background: rgba(255,255,255,.28); }
+
+    /* ── PRINT / PDF (ATS-friendly single-column layout) ── */
+    @media print {
+      .btn-pdf { display: none !important; }
+
+      body {
+        background: #fff;
+        font-size: 10.5pt;
+        line-height: 1.5;
+        color: #000;
+      }
+
+      header {
+        background: #0a66c2 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        padding: 24px 16px 18px;
+      }
+      .contact a { color: #cce0ff !important; }
+
+      /* Flatten two-column grid into a single linear column */
+      .container {
+        display: block;
+        max-width: 100%;
+        margin: 12px 0 0;
+        padding: 0;
+      }
+      .main, .aside { display: contents; }
+
+      .card {
+        box-shadow: none;
+        border-radius: 0;
+        border: none;
+        border-bottom: 1px solid #dde3ef;
+        padding: 14px 0;
+        break-inside: avoid;
+      }
+      .card:last-child { border-bottom: none; }
+
+      .tag {
+        background: #e8f0fc !important;
+        color: #1a4a8a !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        border: 1px solid #c5d8f8;
+      }
+
+      a { color: inherit !important; text-decoration: none; }
+
+      @page {
+        size: A4;
+        margin: 1.8cm 2cm;
+      }
+    }
   </style>
 </head>
 <body>
@@ -178,6 +250,11 @@
       <span>📍 Goiânia, GO</span>
       <a href="tel:+5562984256089">📱 (62) 98425-6089</a>
       <a href="mailto:regis@r3tecnologia.net">✉️ regis@r3tecnologia.net</a>
+    </div>
+    <div class="pdf-action">
+      <button class="btn-pdf" id="btn-pdf" aria-label="Baixar currículo em PDF">
+        ⬇ Baixar PDF
+      </button>
     </div>
   </header>
 
@@ -430,6 +507,12 @@
     </div><!-- /.aside -->
 
   </div><!-- /.container -->
+
+  <script>
+    document.getElementById('btn-pdf').addEventListener('click', function () {
+      window.print();
+    });
+  </script>
 
 </body>
 </html>
