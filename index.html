@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Regis Araujo Melo – Desenvolvedor iOS Sênior</title>
+  <title>Regis Araujo Melo – Mobile Developer Specialist | iOS</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -127,6 +127,18 @@
       font-weight: 600;
       padding: 3px 10px;
       border-radius: 20px;
+    }
+
+    /* ── IMPACT LIST ── */
+    .impact-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .impact-list li { padding-left: 22px; position: relative; color: var(--muted); font-size: .93rem; }
+    .impact-list li::before {
+      content: '▶';
+      position: absolute;
+      left: 0;
+      color: var(--primary);
+      font-size: .7rem;
+      top: 4px;
     }
 
     /* ── EDUCATION ── */
@@ -256,7 +268,7 @@
   <!-- HEADER -->
   <header>
     <h1>Regis Araujo Melo</h1>
-    <p class="role">Desenvolvedor iOS Sênior</p>
+    <p class="role">Mobile Developer Specialist · Especialista em Desenvolvimento iOS</p>
     <div class="contact">
       <span>Goiânia, GO</span>
       <a href="tel:+5562984256089">(62) 98425-6089</a>
@@ -277,11 +289,7 @@
     <section class="card summary">
       <h2>Resumo Profissional</h2>
       <p>
-        Desenvolvedor iOS Sênior com mais de 8 anos de experiência em iOS apps nativos para bancos e grandes
-        empresas (Itaú, Santander, Natura). Especialista em Swift, Objective-C, UIKit, SwiftUI e iOS SDK, com
-        arquiteturas MVVM-C e Clean Architecture, unit tests (XCTest), CI/CD (Jenkins/GitHub Actions) e
-        observabilidade (Datadog, Crashlytics). Experiência em apps bancários, Open Finance e modularização,
-        com entregas na App Store e TestFlight.
+        Especialista em desenvolvimento iOS com mais de 20 anos de trajetória na área de tecnologia. Sólida experiência na construção de ecossistemas móveis de alta complexidade para os setores financeiro (Itaú, Santander, Banco Modal), varejo (Natura) e logística (Odebrecht, RMTC). Especialista em arquiteturas reativas e modulares, com foco rigoroso em segurança (Identity &amp; Fraud), acessibilidade (WCAG) e performance. Histórico comprovado de liderança técnica em projetos de larga escala, impactando diretamente mais de 5 milhões de usuários ativos e gerando economias operacionais superiores a 50% em infraestrutura de terceiros.
       </p>
     </section>
 
@@ -292,86 +300,72 @@
       <div class="tag-group">
         <div class="label">Linguagens</div>
         <div class="tags">
-          <span class="tag">Swift</span>
-          <span class="tag">Objective-C</span>
-          <span class="tag">Java</span>
+          <span class="tag">Swift (Expert)</span>
+          <span class="tag">Objective-C (Expert)</span>
         </div>
       </div>
 
       <div class="tag-group">
-        <div class="label">Frameworks iOS</div>
-        <div class="tags">
-          <span class="tag">UIKit</span>
-          <span class="tag">SwiftUI</span>
-          <span class="tag">iOS SDK</span>
-          <span class="tag">Xcode</span>
-          <span class="tag">ViewCode</span>
-          <span class="tag">AutoLayout</span>
-          <span class="tag">CoreLocation</span>
-          <span class="tag">MapKit</span>
-          <span class="tag">Core Data</span>
-          <span class="tag">Combine</span>
-          <span class="tag">Async/await</span>
-          <span class="tag">URLSession</span>
-        </div>
-      </div>
-
-      <div class="tag-group">
-        <div class="label">Arquitetura &amp; Design Patterns</div>
+        <div class="label">Arquitetura &amp; Modularização</div>
         <div class="tags">
           <span class="tag">MVVM-C</span>
           <span class="tag">VIPER</span>
-          <span class="tag">VIP</span>
-          <span class="tag">MVI</span>
           <span class="tag">Clean Architecture</span>
-          <span class="tag">SOLID</span>
+          <span class="tag">Modularização</span>
+          <span class="tag">ViewCode</span>
           <span class="tag">Coordinator</span>
           <span class="tag">Builder</span>
           <span class="tag">Strategy</span>
           <span class="tag">Factory</span>
+          <span class="tag">SOLID</span>
         </div>
       </div>
 
       <div class="tag-group">
-        <div class="label">Qualidade &amp; CI/CD</div>
+        <div class="label">Frameworks &amp; Tecnologias iOS</div>
         <div class="tags">
-          <span class="tag">XCTest</span>
-          <span class="tag">XCUITest</span>
-          <span class="tag">TDD</span>
-          <span class="tag">Code Review</span>
-          <span class="tag">Jenkins</span>
-          <span class="tag">GitHub Actions</span>
-          <span class="tag">Fastlane</span>
-          <span class="tag">TestFlight</span>
-          <span class="tag">App Store Connect</span>
-        </div>
-      </div>
-
-      <div class="tag-group">
-        <div class="label">Ferramentas &amp; Processo</div>
-        <div class="tags">
-          <span class="tag">Git</span>
-          <span class="tag">Gitflow</span>
-          <span class="tag">CocoaPods</span>
+          <span class="tag">UIKit</span>
+          <span class="tag">RxSwift</span>
           <span class="tag">SPM</span>
-          <span class="tag">REST APIs</span>
-          <span class="tag">JSON</span>
-          <span class="tag">Jira</span>
-          <span class="tag">Confluence</span>
-          <span class="tag">Scrum / Agile</span>
-          <span class="tag">Figma</span>
+          <span class="tag">CocoaPods</span>
+          <span class="tag">CoreLocation</span>
+          <span class="tag">MapKit</span>
+          <span class="tag">iOS SDK</span>
+          <span class="tag">Xcode</span>
+          <span class="tag">AutoLayout</span>
+          <span class="tag">DeepLinks</span>
+          <span class="tag">FIDO</span>
         </div>
       </div>
 
       <div class="tag-group">
-        <div class="label">Observabilidade &amp; Acessibilidade</div>
+        <div class="label">Qualidade &amp; Segurança</div>
         <div class="tags">
-          <span class="tag">Datadog</span>
-          <span class="tag">Crashlytics</span>
-          <span class="tag">Firebase</span>
+          <span class="tag">XCTest (Unitários/UI)</span>
+          <span class="tag">TDD</span>
+          <span class="tag">SonarQube</span>
+          <span class="tag">Veracode</span>
+          <span class="tag">SAST</span>
+          <span class="tag">Acessibilidade (WCAG)</span>
           <span class="tag">VoiceOver</span>
           <span class="tag">Dynamic Type</span>
-          <span class="tag">WCAG</span>
+        </div>
+      </div>
+
+      <div class="tag-group">
+        <div class="label">Observabilidade &amp; DevOps</div>
+        <div class="tags">
+          <span class="tag">AppDynamics</span>
+          <span class="tag">Crashlytics</span>
+          <span class="tag">Firebase</span>
+          <span class="tag">Fastlane</span>
+          <span class="tag">CI/CD</span>
+          <span class="tag">StackSpot (IA)</span>
+          <span class="tag">Git</span>
+          <span class="tag">Gitflow</span>
+          <span class="tag">Jira</span>
+          <span class="tag">Scrum / Agile</span>
+          <span class="tag">Figma</span>
         </div>
       </div>
     </section>
@@ -383,18 +377,17 @@
       <div class="job">
         <div class="job-header">
           <div>
-            <div class="job-company">Zup Innovation</div>
-            <div class="job-title">Senior iOS Developer — App Bancário (Itaú) · Goiânia, GO / Remoto</div>
-            <div class="job-subtitle">Mobile Developer Specialist</div>
+            <div class="job-company">Zup Innovation — Projeto: Itaú Unibanco</div>
+            <div class="job-title">Mobile Developer Specialist · Goiânia, GO / Remoto</div>
           </div>
           <span class="job-period">mar/2022 – fev/2026</span>
         </div>
         <ul>
-          <li>Desenvolvimento de jornadas de segurança e identidade no iOS app do Itaú para mais de 5 milhões de clientes ativos, usando Swift, UIKit, MVVM-C e ViewCode em arquitetura modular.</li>
-          <li>Instrumentação de observabilidade com Datadog e Crashlytics, permitindo alertas proativos e redução de 30% no MTTR de incidentes em produção.</li>
-          <li>Elevação de cobertura de unit tests (XCTest) de menos de 40% para 75% em módulos críticos, aplicando TDD e padrões Strategy, Builder e Coordinator.</li>
-          <li>Evolução da CI/CD pipeline com Jenkins e Gitflow, reduzindo o ciclo de entrega e garantindo qualidade via gates automatizados de testes e code review.</li>
-          <li>Implementação de acessibilidade (VoiceOver, Dynamic Type, WCAG AA) em toda a camada de UI nativa iOS SDK, ampliando o alcance do App Store para usuários PCD.</li>
+          <li><strong>Liderança Técnica em Identidade e Segurança:</strong> Protagonista no desenvolvimento do módulo de Login Unificado e jornadas de segurança do SuperApp Itaú, permitindo o acesso via CPF para mais de 5 milhões de usuários das contas iti e ItaúCartões.</li>
+          <li><strong>Arquitetura e Inovação:</strong> Definição e implementação de arquitetura modular utilizando Swift, UIKit, MVVM-C e ViewCode. Atuação consultiva estratégica junto ao Tech Lead para a adoção de soluções 100% nativas em detrimento de WebViews, priorizando critérios rigorosos de segurança.</li>
+          <li><strong>Segurança e Compliance:</strong> Implementação de jornadas críticas (Biometria Facial, FIDO, Dispositivos Autorizados e Geolocalização) sob validações de SAST, SonarQube e Veracode.</li>
+          <li><strong>Eficiência Operacional:</strong> Instrumentação de observabilidade com AppDynamics e Crashlytics, reduzindo o MTTR (Mean Time To Repair) em produção. Cobertura de testes unitários (XCTest) superior a 75%, aplicando padrões de projeto como Strategy, Builder e Coordinator.</li>
+          <li><strong>DevOps e IA:</strong> Evolução da esteira de CI/CD com integração de Code Review automatizado via agentes de IA (StackSpot) e validação automática de acessibilidade (WCAG).</li>
         </ul>
       </div>
 
@@ -403,16 +396,15 @@
       <div class="job">
         <div class="job-header">
           <div>
-            <div class="job-company">Hexacta</div>
-            <div class="job-title">Desenvolvedor iOS Sênior — Open Finance (Banco Modal) · Remoto</div>
+            <div class="job-company">Hexacta — Projeto: Banco Modal (Open Finance)</div>
+            <div class="job-title">Desenvolvedor iOS Sênior (Consultoria PJ) · Remoto</div>
           </div>
-          <span class="job-period">jul/2021 – mar/2022</span>
+          <span class="job-period">2021 – 2022</span>
         </div>
         <ul>
-          <li>Desenvolvimento de módulos iOS nativos com Swift, UIKit, MVVM-C e RxSwift para o projeto de Open Finance do Banco Modal, integrando REST APIs e fluxos de consentimento.</li>
-          <li>Implementação de camada de segurança e autenticação OAuth 2.0 no iOS app, seguindo padrões do Banco Central para Open Banking.</li>
-          <li>Criação de unit tests e testes de integração com XCTest, atingindo cobertura de 70% nos fluxos críticos de transferência e compartilhamento de dados.</li>
-          <li>Colaboração com time multidisciplinar (backend, produto, design) em metodologia Scrum, entregando sprints quinzenais com qualidade via TestFlight.</li>
+          <li><strong>Engenharia Reativa:</strong> Desenvolvimento de módulos nativos para o ecossistema de Open Finance, utilizando RxSwift para gestão de estados complexos e fluxos de consentimento.</li>
+          <li><strong>Integração Cross-Channel:</strong> Implementação de fluxos de jornada iniciados na Web com derivação para o ambiente nativo via DeepLinks, garantindo a continuidade e segurança dos dados.</li>
+          <li><strong>Rigor Técnico:</strong> Adesão estrita a padrões de desenvolvimento sem dependências externas, priorizando Delegates e gerenciamento preciso de memória via DisposeBag.</li>
         </ul>
       </div>
 
@@ -421,15 +413,14 @@
       <div class="job">
         <div class="job-header">
           <div>
-            <div class="job-company">E-Deploy</div>
-            <div class="job-title">Desenvolvedor iOS — App de Consultoras (Natura) · Goiânia, GO</div>
+            <div class="job-company">E-Deploy — Projeto: Natura</div>
+            <div class="job-title">Desenvolvedor iOS Sênior (Consultoria) · Goiânia, GO</div>
           </div>
-          <span class="job-period">nov/2020 – jul/2021</span>
+          <span class="job-period">2020 – 2021</span>
         </div>
         <ul>
-          <li>Sustentação e evolução do iOS app Natura para rede de mais de 1 milhão de consultoras, garantindo estabilidade com Crashlytics e ciclos de hotfix via TestFlight.</li>
-          <li>Migração progressiva de módulos legados de Objective-C para Swift, reduzindo crashes em 25% e melhorando o tempo de carregamento das telas principais.</li>
-          <li>Adoção de VIPER e Clean Architecture para novos módulos, aumentando a testabilidade com XCTest e facilitando onboarding de novos desenvolvedores.</li>
+          <li><strong>Escalabilidade Massiva:</strong> Sustentação e evolução do app para a rede de 1 milhão de consultoras, garantindo alta disponibilidade e estabilidade em ambiente de tráfego intenso.</li>
+          <li><strong>Modernização de Legado:</strong> Condução da migração modular de Objective-C para Swift, utilizando MVVM e VIPER, resultando na redução drástica de crashes e débito técnico.</li>
         </ul>
       </div>
 
@@ -438,15 +429,14 @@
       <div class="job">
         <div class="job-header">
           <div>
-            <div class="job-company">Try Consultoria</div>
-            <div class="job-title">Desenvolvedor iOS — Design System (Banco Santander) · Remoto</div>
+            <div class="job-company">Try Consultoria — Projeto: Banco Santander</div>
+            <div class="job-title">Desenvolvedor iOS Sênior (Consultoria PJ) · Remoto</div>
           </div>
           <span class="job-period">jul/2020 – out/2020</span>
         </div>
         <ul>
-          <li>Desenvolvimento de componentes UIKit reutilizáveis para o Design System do Banco Santander, com suporte a Dark Mode e Dynamic Type a partir de especificações Figma.</li>
-          <li>Criação de biblioteca de componentes com Swift Package Manager (SPM), facilitando o reuso em múltiplos iOS apps da instituição.</li>
-          <li>Escrita de unit tests (XCTest) para garantir consistência visual e comportamental dos componentes iOS SDK.</li>
+          <li><strong>Engenharia de Design System:</strong> Desenvolvimento de biblioteca de componentes reutilizáveis em UIKit e distribuição via Swift Package Manager (SPM) para múltiplas squads do banco.</li>
+          <li><strong>Fidelidade Visual:</strong> Tradução técnica de definições do Figma para código documentado, com foco em acessibilidade e consistência comportamental através de XCTest.</li>
         </ul>
       </div>
 
@@ -456,14 +446,13 @@
         <div class="job-header">
           <div>
             <div class="job-company">Supera Tecnologia</div>
-            <div class="job-title">Desenvolvedor Full Stack / Mobile — App de Transporte · Goiânia, GO</div>
+            <div class="job-title">Desenvolvedor Mobile Sênior / Full Stack · Goiânia, GO</div>
           </div>
           <span class="job-period">ago/2018 – jul/2020</span>
         </div>
         <ul>
-          <li>Desenvolvimento e lançamento no App Store do app oficial de transporte coletivo da Grande Goiânia (SiMRmtc), com rastreamento GPS em tempo real para dezenas de milhares de usuários diários.</li>
-          <li>Implementação de rastreamento com CoreLocation e MapKit, integrando REST APIs de geolocalização e reduzindo o tempo de atualização do mapa em 40%.</li>
-          <li>Desenvolvimento mobile iOS com Swift e UIKit, CI/CD via Jenkins, e persistência local com Core Data para funcionamento offline parcial.</li>
+          <li><strong>Sustentação Multidomínio:</strong> Atuação nos apps SiMRmtc (Mobilidade Urbana) e ValeCard (Fintech), modernizando bases legadas em Objective-C para Swift com arquitetura MVVM e ViewCode.</li>
+          <li><strong>Geolocalização em Tempo Real:</strong> Manutenção de sistemas críticos de rastreamento de frotas e planejamento de rotas dinâmicas com CoreLocation e MapKit.</li>
         </ul>
       </div>
 
@@ -473,13 +462,13 @@
         <div class="job-header">
           <div>
             <div class="job-company">MoveJa Tecnologia</div>
-            <div class="job-title">Desenvolvedor Full Stack — Plataforma de Transporte · Goiânia, GO</div>
+            <div class="job-title">Desenvolvedor Mobile Sênior (Consultoria) · Goiânia, GO</div>
           </div>
-          <span class="job-period">out/2017 – mai/2018</span>
+          <span class="job-period">out/2017 – jun/2018</span>
         </div>
         <ul>
-          <li>Desenvolvimento ponta a ponta de plataforma de transporte: iOS app nativo com Swift e UIKit, backend REST (Node.js) e painel web, conectando motoristas e passageiros.</li>
-          <li>Publicação do iOS app na App Store com fluxo completo de App Store Connect, TestFlight e aprovação de review da Apple.</li>
+          <li><strong>Turnaround Tecnológico:</strong> Migração de MVP híbrido (Cordova) para nativo (Swift/Java), reduzindo fraudes de viagens fake em 40%.</li>
+          <li><strong>Otimização de Custos:</strong> Redução de 55% no consumo de APIs do Google Maps através de estratégias de cache inteligente e otimização de requisições.</li>
         </ul>
       </div>
 
@@ -488,35 +477,28 @@
       <div class="job">
         <div class="job-header">
           <div>
-            <div class="job-company">Construtora Norberto Odebrecht</div>
-            <div class="job-title">Analista de Sistemas / Infraestrutura</div>
+            <div class="job-company">Trajetória de Base — Infraestrutura, ERP e Mobile Inicial</div>
+            <div class="job-title">Consórcio Odebrecht (Aeroporto de Goiânia) &amp; Construtora Norberto Odebrecht · Goiânia, GO</div>
           </div>
-          <span class="job-period">dez/2008 – ago/2017</span>
+          <span class="job-period">2005 – 2017</span>
         </div>
         <ul>
-          <li>Desenvolvimento e manutenção de sistemas internos corporativos com Java, apoio a engenharia e gestão de infraestrutura de TI em projetos de grande porte no Brasil.</li>
-          <li>Automação de processos internos com scripts e ferramentas de monitoramento, reduzindo retrabalho e tempo de resposta a incidentes de infraestrutura.</li>
+          <li>Carreira sólida iniciada no Consórcio Odebrecht no canteiro de obras do Aeroporto de Goiânia, evoluindo de suporte e infraestrutura de redes (Cisco/Juniper/AD) para o desenvolvimento de sistemas ERP em Delphi (DataSnap/Oracle) e mobile inicial (Objective-C/Java).</li>
+          <li>Administração de servidores Active Directory (GPOs, políticas de segurança) e redes Cisco/Juniper; desenvolvimento de sistema de Ponto Eletrônico e Gestão de Custos, automatizando a integração com folha de pagamento e apuração de serviços de terceiros.</li>
         </ul>
       </div>
 
-      <hr class="job-divider" />
+    </section>
 
-      <div class="job">
-        <div class="job-header">
-          <div>
-            <div class="job-company">Consórcio Construtora Norberto Odebrecht &amp; Via Engenharia</div>
-            <div class="job-title">Técnico de TI (Infraestrutura e Desenvolvimento) · Goiânia, GO</div>
-            <div class="job-subtitle">Canteiro de obras do Aeroporto de Goiânia</div>
-          </div>
-          <span class="job-period">2005 – 2008</span>
-        </div>
-        <ul>
-          <li>Desenvolvimento de sistema de Ponto Eletrônico e Gestão de Custos com Delphi e banco de dados Firebird, automatizando a apropriação de serviços de terceiros e integração com folha de pagamento.</li>
-          <li>Administração de servidores Active Directory (GPOs, políticas de segurança) e redes Cisco/Juniper para aproximadamente 50 usuários administrativos do canteiro de obras.</li>
-          <li>Análise de viabilidade técnica com foco em TCO (Custo Total de Propriedade) e ROI, otimizando recursos tecnológicos e custos de telefonia do consórcio.</li>
-        </ul>
-      </div>
-
+    <!-- DESTAQUES DE IMPACTO -->
+    <section class="card">
+      <h2>Destaques de Impacto (Business Value)</h2>
+      <ul class="impact-list">
+        <li>5M+ usuários orquestrados em jornadas de segurança e identidade no SuperApp Itaú.</li>
+        <li>55% de economia em custos de infraestrutura de mapas (Google Maps APIs) na MoveJa Tecnologia.</li>
+        <li>40% de redução em fraudes financeiras em app de mobilidade após migração para arquitetura nativa.</li>
+        <li>MTTR reduzido significativamente em produção através de cultura de observabilidade proativa com AppDynamics e Crashlytics.</li>
+      </ul>
     </section>
 
     <!-- PROJETOS RELEVANTES -->
@@ -563,7 +545,7 @@
       </div>
       <div class="edu-item">
         <div class="degree">Bacharelado em Ciência da Computação</div>
-        <div class="institution">UNIP</div>
+        <div class="institution">UNIP · Início em 2002</div>
       </div>
     </section>
 
