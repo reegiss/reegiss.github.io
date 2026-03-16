@@ -158,8 +158,37 @@
       header h1 { font-size: 1.6rem; }
     }
 
-    /* ── PDF BUTTON ── */
-    .pdf-action { margin-top: 20px; }
+    /* ── HEADER ACTIONS ── */
+    .header-actions {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+    .lang-switcher {
+      display: inline-flex;
+      border: 1.5px solid rgba(255,255,255,.55);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    .btn-lang {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: rgba(255,255,255,.10);
+      color: rgba(255,255,255,.75);
+      border: none;
+      padding: 8px 16px;
+      font-size: .88rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background .2s, color .2s;
+    }
+    .btn-lang + .btn-lang { border-left: 1.5px solid rgba(255,255,255,.55); }
+    .btn-lang:hover { background: rgba(255,255,255,.22); color: #fff; }
+    .btn-lang.active { background: rgba(255,255,255,.28); color: #fff; }
     .btn-pdf {
       display: inline-flex;
       align-items: center;
@@ -178,7 +207,7 @@
 
     /* ── PRINT / PDF ── */
     @media print {
-      .btn-pdf { display: none !important; }
+      .btn-pdf, .lang-switcher { display: none !important; }
 
       body {
         background: #fff;
@@ -268,7 +297,7 @@
   <!-- HEADER -->
   <header>
     <h1>Regis Araujo Melo</h1>
-    <p class="role">Mobile Developer Specialist · Especialista em Desenvolvimento iOS</p>
+    <p class="role" id="header-role">Mobile Developer Specialist · Especialista em Desenvolvimento iOS</p>
     <div class="contact">
       <span>Goiânia, GO</span>
       <a href="tel:+5562984256089">(62) 98425-6089</a>
@@ -276,13 +305,18 @@
       <a href="https://www.linkedin.com/in/regisaraujomelo" target="_blank" rel="noopener noreferrer">linkedin.com/in/regisaraujomelo</a>
       <a href="https://github.com/reegiss" target="_blank" rel="noopener noreferrer">github.com/reegiss</a>
     </div>
-    <div class="pdf-action">
+    <div class="header-actions">
+      <div class="lang-switcher" role="group" aria-label="Selecionar idioma / Select language">
+        <button class="btn-lang active" id="btn-pt" aria-pressed="true" onclick="setLang('pt')">🇧🇷 PT-BR</button>
+        <button class="btn-lang" id="btn-en" aria-pressed="false" onclick="setLang('en')">🇺🇸 EN-US</button>
+      </div>
       <button class="btn-pdf" id="btn-pdf" aria-label="Baixar currículo em PDF">
-        Baixar PDF
+        <span id="pdf-btn-label">Baixar PDF</span>
       </button>
     </div>
   </header>
 
+  <div id="cv-pt">
   <div class="container">
 
     <!-- RESUMO PROFISSIONAL -->
@@ -550,12 +584,320 @@
       </div>
     </section>
 
-  </div><!-- /.container -->
+  </div><!-- /.container PT -->
+  </div><!-- /#cv-pt -->
+
+  <div id="cv-en" style="display:none">
+  <div class="container">
+
+    <!-- PROFESSIONAL SUMMARY -->
+    <section class="card summary">
+      <h2>Professional Summary</h2>
+      <p>
+        iOS development specialist with over 20 years of experience in technology. Solid background building high-complexity mobile ecosystems for the financial (Itaú, Santander, Banco Modal), retail (Natura), and logistics (Odebrecht, RMTC) sectors. Expert in reactive and modular architectures, with a strong focus on security (Identity &amp; Fraud), accessibility (WCAG), and performance. Proven track record of technical leadership in large-scale projects, directly impacting more than 5 million active users and generating operational savings exceeding 50% in third-party infrastructure costs.
+      </p>
+    </section>
+
+    <!-- TECHNICAL SKILLS -->
+    <section class="card">
+      <h2>Technical Skills</h2>
+
+      <div class="tag-group">
+        <div class="label">Languages</div>
+        <div class="tags">
+          <span class="tag">Swift (Expert)</span>
+          <span class="tag">Objective-C (Expert)</span>
+        </div>
+      </div>
+
+      <div class="tag-group">
+        <div class="label">Architecture &amp; Modularization</div>
+        <div class="tags">
+          <span class="tag">MVVM-C</span>
+          <span class="tag">VIPER</span>
+          <span class="tag">Clean Architecture</span>
+          <span class="tag">Modularization</span>
+          <span class="tag">ViewCode</span>
+          <span class="tag">Coordinator</span>
+          <span class="tag">Builder</span>
+          <span class="tag">Strategy</span>
+          <span class="tag">Factory</span>
+          <span class="tag">SOLID</span>
+        </div>
+      </div>
+
+      <div class="tag-group">
+        <div class="label">iOS Frameworks &amp; Technologies</div>
+        <div class="tags">
+          <span class="tag">UIKit</span>
+          <span class="tag">SwiftUI</span>
+          <span class="tag">RxSwift</span>
+          <span class="tag">SPM</span>
+          <span class="tag">CocoaPods</span>
+          <span class="tag">CoreLocation</span>
+          <span class="tag">MapKit</span>
+          <span class="tag">iOS SDK</span>
+          <span class="tag">Xcode</span>
+          <span class="tag">AutoLayout</span>
+          <span class="tag">DeepLinks</span>
+          <span class="tag">FIDO</span>
+        </div>
+      </div>
+
+      <div class="tag-group">
+        <div class="label">Quality &amp; Security</div>
+        <div class="tags">
+          <span class="tag">XCTest (Unit/UI)</span>
+          <span class="tag">TDD</span>
+          <span class="tag">SonarQube</span>
+          <span class="tag">Veracode</span>
+          <span class="tag">SAST</span>
+          <span class="tag">Accessibility (WCAG)</span>
+          <span class="tag">VoiceOver</span>
+          <span class="tag">Dynamic Type</span>
+        </div>
+      </div>
+
+      <div class="tag-group">
+        <div class="label">Observability &amp; DevOps</div>
+        <div class="tags">
+          <span class="tag">AppDynamics</span>
+          <span class="tag">Crashlytics</span>
+          <span class="tag">Firebase</span>
+          <span class="tag">Fastlane</span>
+          <span class="tag">CI/CD</span>
+          <span class="tag">StackSpot (AI)</span>
+          <span class="tag">Git</span>
+          <span class="tag">Gitflow</span>
+          <span class="tag">Jira</span>
+          <span class="tag">Scrum / Agile</span>
+          <span class="tag">Figma</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROFESSIONAL EXPERIENCE -->
+    <section class="card">
+      <h2>Professional Experience</h2>
+
+      <div class="job">
+        <div class="job-header">
+          <div>
+            <div class="job-company">Zup Innovation — Project: Itaú Unibanco</div>
+            <div class="job-title">Mobile Developer Specialist · Goiânia, GO / Remote</div>
+          </div>
+          <span class="job-period">Mar/2022 – Feb/2026</span>
+        </div>
+        <ul>
+          <li><strong>Technical Leadership in Identity &amp; Security:</strong> Key player in developing the Unified Login module and security journeys for the Itaú SuperApp, enabling CPF-based access for over 5 million users of iti and ItaúCartões accounts.</li>
+          <li><strong>Architecture &amp; Innovation:</strong> Definition and implementation of modular architecture using Swift, UIKit, MVVM-C, and ViewCode. Strategic advisory role alongside the Tech Lead for the adoption of 100% native solutions over WebViews, prioritizing strict security criteria.</li>
+          <li><strong>Security &amp; Compliance:</strong> Implementation of critical journeys (Facial Biometrics, FIDO, Authorized Devices, and Geolocation) under SAST, SonarQube, and Veracode validations.</li>
+          <li><strong>Operational Efficiency:</strong> Observability instrumentation with AppDynamics and Crashlytics, reducing MTTR (Mean Time To Repair) in production. Unit test coverage (XCTest) above 75%, applying design patterns such as Strategy, Builder, and Coordinator.</li>
+          <li><strong>DevOps &amp; AI:</strong> CI/CD pipeline evolution with integration of automated Code Review via AI agents (StackSpot) and automatic accessibility validation (WCAG).</li>
+        </ul>
+      </div>
+
+      <hr class="job-divider" />
+
+      <div class="job">
+        <div class="job-header">
+          <div>
+            <div class="job-company">Hexacta — Project: Banco Modal (Open Finance)</div>
+            <div class="job-title">Senior iOS Developer (PJ Consulting) · Remote</div>
+          </div>
+          <span class="job-period">Jul/2021 – Mar/2022</span>
+        </div>
+        <ul>
+          <li><strong>Reactive Engineering:</strong> Development of native modules for the Open Finance ecosystem, using RxSwift for complex state management and consent flows.</li>
+          <li><strong>Cross-Channel Integration:</strong> Implementation of journey flows initiated on the Web with derivation to the native environment via DeepLinks, ensuring data continuity and security.</li>
+          <li><strong>Technical Rigor:</strong> Strict adherence to development standards without external dependencies, prioritizing Delegates and precise memory management via DisposeBag.</li>
+        </ul>
+      </div>
+
+      <hr class="job-divider" />
+
+      <div class="job">
+        <div class="job-header">
+          <div>
+            <div class="job-company">E-Deploy — Project: Natura</div>
+            <div class="job-title">Senior iOS Developer (Consulting) · Goiânia, GO</div>
+          </div>
+          <span class="job-period">Nov/2020 – Jul/2021</span>
+        </div>
+        <ul>
+          <li><strong>Massive Scalability:</strong> Maintenance and evolution of the app for the network of 1 million consultants, ensuring high availability and stability in high-traffic environments.</li>
+          <li><strong>Legacy Modernization:</strong> Leading the modular migration from Objective-C to Swift using MVVM and VIPER, resulting in a drastic reduction of crashes and technical debt.</li>
+        </ul>
+      </div>
+
+      <hr class="job-divider" />
+
+      <div class="job">
+        <div class="job-header">
+          <div>
+            <div class="job-company">Try Consultoria — Project: Banco Santander</div>
+            <div class="job-title">Senior iOS Developer (PJ Consulting) · Remote</div>
+          </div>
+          <span class="job-period">Jul/2020 – Oct/2020</span>
+        </div>
+        <ul>
+          <li><strong>Design System Engineering:</strong> Development of a reusable component library in UIKit and distribution via Swift Package Manager (SPM) for multiple bank squads.</li>
+          <li><strong>Visual Fidelity:</strong> Technical translation of Figma definitions into documented code, focusing on accessibility and behavioral consistency through XCTest.</li>
+        </ul>
+      </div>
+
+      <hr class="job-divider" />
+
+      <div class="job">
+        <div class="job-header">
+          <div>
+            <div class="job-company">Supera Tecnologia</div>
+            <div class="job-title">Senior Mobile / Full Stack Developer · Goiânia, GO</div>
+          </div>
+          <span class="job-period">Aug/2018 – Jul/2020</span>
+        </div>
+        <ul>
+          <li><strong>Multi-Domain Support:</strong> Work on SiMRmtc (Urban Mobility) and ValeCard (Fintech) apps, modernizing Objective-C legacy codebases to Swift with MVVM and ViewCode architecture.</li>
+          <li><strong>Real-Time Geolocation:</strong> Maintenance of critical fleet tracking systems and dynamic route planning with CoreLocation and MapKit.</li>
+        </ul>
+      </div>
+
+      <hr class="job-divider" />
+
+      <div class="job">
+        <div class="job-header">
+          <div>
+            <div class="job-company">MoveJa Tecnologia</div>
+            <div class="job-title">Senior Mobile Developer (Consulting) · Goiânia, GO</div>
+          </div>
+          <span class="job-period">Oct/2017 – Jun/2018</span>
+        </div>
+        <ul>
+          <li><strong>Technology Turnaround:</strong> Migration from hybrid MVP (Cordova) to native (Swift/Java), reducing fake ride fraud by 40%.</li>
+          <li><strong>Cost Optimization:</strong> 55% reduction in Google Maps API consumption through intelligent caching strategies and request optimization.</li>
+        </ul>
+      </div>
+
+      <hr class="job-divider" />
+
+      <div class="job">
+        <div class="job-header">
+          <div>
+            <div class="job-company">Foundation Career — Infrastructure, ERP &amp; Early Mobile</div>
+            <div class="job-title">Consórcio Odebrecht (Goiânia Airport) &amp; Construtora Norberto Odebrecht · Goiânia, GO</div>
+          </div>
+          <span class="job-period">Aug/2005 – Aug/2017</span>
+        </div>
+        <ul>
+          <li>Solid career started at Consórcio Odebrecht at the Goiânia Airport construction site, evolving from network support and infrastructure (Cisco/Juniper/AD) to ERP system development in Delphi (DataSnap/Oracle) and early mobile development (Objective-C/Java).</li>
+          <li>Active Directory server administration (GPOs, security policies) and Cisco/Juniper networks; development of Electronic Time Clock and Cost Management system, automating payroll integration and third-party service accounting.</li>
+        </ul>
+      </div>
+
+    </section>
+
+    <!-- IMPACT HIGHLIGHTS -->
+    <section class="card">
+      <h2>Impact Highlights (Business Value)</h2>
+      <ul class="impact-list">
+        <li>5M+ users orchestrated in security and identity journeys in the Itaú SuperApp.</li>
+        <li>55% savings in map infrastructure costs (Google Maps APIs) at MoveJa Tecnologia.</li>
+        <li>40% reduction in financial fraud in a mobility app after migration to native architecture.</li>
+        <li>MTTR significantly reduced in production through a proactive observability culture with AppDynamics and Crashlytics.</li>
+      </ul>
+    </section>
+
+    <!-- RELEVANT PROJECTS -->
+    <section class="card">
+      <h2>Relevant Projects</h2>
+
+      <div class="job">
+        <div class="job-header">
+          <div>
+            <div class="job-company">SiMRmtc — Public Transit App</div>
+            <div class="job-title">iOS App · Supera Tecnologia</div>
+          </div>
+          <span class="job-period">2018 – 2020</span>
+        </div>
+        <ul>
+          <li>Official public transit app for the Goiânia Metropolitan Region, available on the App Store and Google Play, with real-time GPS tracking using CoreLocation and MapKit.</li>
+          <li>Technologies: Swift, UIKit, CoreLocation, MapKit, Core Data, REST APIs, Jenkins, Git.</li>
+        </ul>
+      </div>
+
+      <hr class="job-divider" />
+
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="card">
+      <h2>Education</h2>
+      <div class="edu-item">
+        <div class="degree">MBA in IT Management</div>
+        <div class="institution">FGV</div>
+      </div>
+      <div class="edu-item">
+        <div class="degree">Bachelor's Degree in Computer Science</div>
+        <div class="institution">UNIP · Feb/2002 to Dec/2005</div>
+      </div>
+    </section>
+
+    <!-- LANGUAGES -->
+    <section class="card">
+      <h2>Languages</h2>
+      <div class="lang-item">
+        <div class="lang">Portuguese</div>
+        <div class="level">Native</div>
+      </div>
+      <div class="lang-item">
+        <div class="lang">English</div>
+        <div class="level">Technical — Advanced documentation reading</div>
+      </div>
+    </section>
+
+  </div><!-- /.container EN -->
+  </div><!-- /#cv-en -->
 
   <script>
+    var translations = {
+      pt: {
+        role: 'Mobile Developer Specialist · Especialista em Desenvolvimento iOS',
+        pdfLabel: 'Baixar PDF',
+        pdfAriaLabel: 'Baixar currículo em PDF'
+      },
+      en: {
+        role: 'Mobile Developer Specialist · iOS Development Specialist',
+        pdfLabel: 'Download PDF',
+        pdfAriaLabel: 'Download CV as PDF'
+      }
+    };
+
+    function setLang(lang) {
+      var isEn = lang === 'en';
+      document.getElementById('cv-pt').style.display = isEn ? 'none' : '';
+      document.getElementById('cv-en').style.display = isEn ? '' : 'none';
+      document.getElementById('btn-pt').classList.toggle('active', !isEn);
+      document.getElementById('btn-pt').setAttribute('aria-pressed', String(!isEn));
+      document.getElementById('btn-en').classList.toggle('active', isEn);
+      document.getElementById('btn-en').setAttribute('aria-pressed', String(isEn));
+      document.getElementById('header-role').textContent = translations[lang].role;
+      document.getElementById('pdf-btn-label').textContent = translations[lang].pdfLabel;
+      document.getElementById('btn-pdf').setAttribute('aria-label', translations[lang].pdfAriaLabel);
+      document.documentElement.lang = isEn ? 'en' : 'pt-BR';
+      try { localStorage.setItem('cv-lang', lang); } catch(e) {}
+    }
+
     document.getElementById('btn-pdf').addEventListener('click', function () {
       window.print();
     });
+
+    // Restore saved language preference
+    (function () {
+      try {
+        var saved = localStorage.getItem('cv-lang');
+        if (saved === 'en') { setLang('en'); }
+      } catch(e) {}
+    })();
   </script>
 
 </body>
