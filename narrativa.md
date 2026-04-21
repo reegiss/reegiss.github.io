@@ -1,47 +1,218 @@
-Minha jornada de 2005 a 2008 - A minha trajetória começou cedo, antes de iniciar a faculdade, aprendi programação praticamente sozinho. Comecei com a linguagem basic, aprendendo a logica, depois comecei a estudar a linguagem pascal com delhi. Ao entrar na faculdade de ciência da computação no ano de 2002. Durante a faculdade tive contato com a linguagem java, onde tive as experiencias com jsp para web e outras funcionalidades da linguagem java na epoca.
-Em agosto/2005, tive a oportunidade de entrar no Consorcio formado pela (Construtora Norberto Odebrecht e Via Engenharia) é responsável pela implantação do novo sistema aeroportuário, com novo terminal de passageiros, pátio de aeronaves, estacionamento de veículos, acesso viário do Aeroporto de Goiânia , como assistente tecnico. onde era responsavel pela suporte aos usuarios do canteiro de obras com cerca de 50 usuarios admistrativos, e administracao da infraestrutura de ti. O CPD era composto for servidores active directory, servidor de arquivo. link dedicado com router da cisco. firewall da juniper, responsavel pela conexao com datacenter em sao paulo.
-as minhas atribuicoes, envolviam admistrador os servidores, efetuar as rotinas de backup, criar as gpo, mapeamento das unidade de rede aos usuarios. manter o correto funcionamento das impressoras. efetuar a criacao de usuarios no AD, manter os grupos, efetuar rotinas de update das maquinas, efetuar a verificacoes de seguranca, como antivirus centralizado com trendmicro. manter regras de firewall, administrar o sistema de telefonia convencional, implantar sistema de tarifacao de chamadas. Aplicação de Políticas de segurança Corporativa.
-Analise e Planejamento das ações necessárias para alocação dos recursos tecnológicos, garantindo um TCO x (Custo Total de Propriedade) ROI (Retorno sobre Investimento) mais adequado a realidade da empresa. 
-Gerenciamento da rede e Sistemas de Telefonia, adotando as ferramentas adequadas para reduzir os custos de telefonia. Criando procedimentos para garantir a segurança, integridade e confidencialidade das informações.  
-No ano de 2006, comecei o desenvolvimento de sistema de Ponto Eletrônico usando Delphi e banco de dados firebird, usando tecnologia client e servidor usando datasnap, o sistema captura os dados dos coletores de dados portais, analisa as informações, efetuando a manutenção das marcações, tratando as ocorrências (faltas, atrasos, hora-extra) e distribuição das verbas e gerando relatórios das ocorrências e das folhas de ponto de cada colaborador. Gerando os arquivos para a completa integração com o sistema de Folha de Pagamento da empresa.  esta sistema tinha um modulo de acompanhamento e apropriação dos Serviços, sistema responsável pela quantificação dos custos envolvidos nos serviços executados na obra. Efetuando o rateio dos custos nas UA corretas, apropriação os serviços executados pelas empresas terceirizadas, gerando os índices de custo para o planejamento da obra de maneira geral. Gerando relatorios para engenharia e custos para uma melhor admistracao de custos e planejamento. 
-Em 2007 foi desenvolvida a integracao com sistema de engenharia SISENG -  sistema para Orçamentação e acompanhamento e planejamento em Engenharia Civil, para viabilizar a integracao foi desenvolvido um webservice e troca do banco de dados de firebird, para oracle para maior escala. Uma vez que o siseng ja usava oracle em sua base.
-Em 2008, inicie uma demanda de apoiar outras unidades de negocio em as cidade: Sao caetano - sp, campinas - sp, dom pedrito - rs, natal - rn, salvador - ba, como objetivo treinar os responsaveis de ti das localidades para manter o padrao da definicoes corporativas.
-Principais Atividades desenvolvidas nos contratos: 
-Padronização do Ambiente de TI; 
-Aplicação de Políticas de segurança Corporativa; 
-Qualificação do recurso de TI Local; 
-Identificação de recurso local para atuação com TI nos contratos. 
-Analise Técnica e reestruturação do ambiente de TI; 
-Mobilização e logística de Telecomunicação; 
-Adequação dos recursos tecnológicos para implantação do sistema O2, buscando soluções alinhadas com realidade do contrato. 
-Em dezembro/2008 deixei o consorcio e foi transferido para hold Construtura Odebrecht, para realizar os treinamentos, permanecendo os apoios nas unidades ate final de 2009. 
-Em 2010, acompanhando o surgimento na insdustria de telefonia com iphone, android, blackberry, palm0s, etc, comecei a enxergar que deveria entrar mercado. Neste periodo ate 2011 comecei a estudar o desenvolvimento para android com java e e IOS com objective-c. Neste periodo comecei a deixar de usar delphi e passei a dar mais atencao a java, entendendo que o mercado corporativo estava mais propenso a java do aplicacoes desktop. 
-Em 2012, comecei a desenvolver os primeiros projetos mobile. o primeiro deles que fiz o cliclo completo foi um aplicativo para radio online, nas duas plaformas ios e android com publicacao na loja e com um numero aceitavel de usuarios ativos. alem de receber a transmissao online da emissora de radio disponha de um servico "tipo um lista telefonica" em parceria com a cdl da cidade de bela vista de goias, para prover uma agenda dos comercios locais, usando banco de dados local com sqllite, tendo a possibilidade de atualizacao da agenda online. filtrar por segmento, nome de estabelecimento, etc. sendo usado como arquitetura MVP
-Em 2012 e 2013, participei do desenvolvimento do aplicativo interno de previdencia privada da odebrecht para as duas plataformas tambem. sendo usado como arquitetura MVP.
-Em 2014 a apple lancou o swift, em setembro eu acho. nas primeiras versoes nao usei mantendo objective-c, sendo que apos o lancamento da versao 4 do swift em 2017 que comecei a olhar com mais atencao. pois queria esperar a maior maturidade na linguagem. Neste periodo foi necessario criar as primeiras bridge para usar objective-c e swift juntos. Em setembro/2017 deixei de atuar com servicos de infraestrutura, focando somente em desenvolvimento.
+# Narrativa de Carreira
 
-MoveJa Tecnologia–(Out/2017–junho/2018) - neste periodo fui convidado a participar de uma startup como prestador de servico, de uma plataforma de prestação de serviço de transporte particular de passageiro. esilo uber. A missao inicial era migrar o aplicativo mvp desenvlvido em cordova com javascript para uma tecnologia mais robusta em linguagem nativa, para suportar servicos de geolocalizacao, notificacao, etc de forma mais eficaz. Neste projeto havia falhas graves de seguranca que estavam permitindo fraude, com viagens fake. Apos as primeiras versoes, reduzimos as ocorrencias em 35 a 40%. logo nas primeiras versoes. alem disso, as notas na lojas comecaram ter melhores avaliacoes. Como arquitetura foi escolhido o MVVM, possibilitando a inclusao de testes uniatarios usando xctest, que nao existiam na versao inicial. Na camada de mapas esta usando google maps, usando directions para obter os enderecos. falando neste caso em particupar. havia um consumo excessivo das api, apos uma estrategia de cache conseguimos uma economia de ate 55% nos consumos de api do google. Neste projeto foi utilizado principalmente swift para ios, e java para android. Entre abril e maio/2018, a carga de trabalho estava muito alta e esta a procura de profissionais para atuar na starup, para isso estava participando de alguns eventos de tecnologia que ocorriam na supera tecnologia. para identificar recursos. No final de maio deixei de atuar na moveja para fazer alguns frelancer na supera. buscando uma rotina menos estressante.
+## Início: Formação e Primeiros Contatos com Tecnologia (até 2005)
 
-Supera Tecnologia | Desenvolvedor Full Stack / Mobile | ago/2018 – jul/2020 - efetivo clt
-Na supera, atuava nos duas tecnologias, android e ios, mas com maior foco em ios, como é uma empresa que atendia varios clientes. principalmente na sustentacao e correcoes de bugs.
- RMTC Goiânia - Os principais aplicativos oficiais da RMTC Goiânia são o SiMRmtc (Android/iOS) e o RMTC Goiânia. Eles oferecem localização de ônibus em tempo real, planejamento de rotas, consulta de pontos de recarga Sitpass, alertas de chegada e atendimento virtual. 
-ValeCard - A ValeCard oferece diferentes aplicativos voltados para usuários de benefícios, motoristas e gestores de frotas. O principal aplicativo que fazia sustentacao, ValeCard Benefício: O principal app para quem utiliza cartões de alimentação, refeição e convênio. Permite o desbloqueio de cartões, alteração de senha e busca de estabelecimentos próximos pelo mapa. ValeCard Motorista é o parceiro ideal para o dia a dia dos motoristas que utilizam os cartões Abastecimento da ValeCard.
-ValeCard Bank -  é a solução de conta digital da ValeCard, uma empresa brasileira consolidada no mercado de meios de pagamento e gestão de benefícios desde 1995.
-Rapidili é um app que conecta usuários à distribuidores de bebidas, que permite comprar as bebidas. Em jul/2020 encerrei meu ciclo na supera,  decidi focar exclusivamente em ios, deixando de desemvolver para android e backend. Embora sempre acompanhando o mercado com kotln e java com spring-boot.
+A trajetória começou cedo, antes mesmo da faculdade. Aprendi programação praticamente sozinho: primeiro com BASIC (foco em lógica), depois com Pascal/Delphi. Em 2002, ingressei no curso de Ciência da Computação, onde tive contato com Java (JSP para web e outras funcionalidades da linguagem).
 
-Try Consultoria - Desenvolvedor iOS — Remoto PJ jul/2020 – out/2020. contrato com tempo definido.
-Desenvolvimento de componentes UIKit reutilizáveis para o Design System do Banco Santander, a partir das definicoes no figma, Como missao desenvolver os compomentes e elaborar a documentacao de uso. Criação de biblioteca de componentes com Swift Package Manager (SPM), facilitando o reuso em múltiplos projetos. Escrita de unit tests (XCTest) para garantir consistência visual e comportamental dos componentes iOS SDK. 
+---
 
-A proxima cunsultoria foi E-Deploy é uma empresa brasileira de tecnologia especializada no desenvolvimento de soluções para gestão empresarial com foco em varejo.
-E-Deploy - Desenvolvedor iOS — App de Consultoras (Natura).
-Sustentação e evolução do iOS app Natura para rede de mais de 1 milhão de consultoras, garantindo estabilidade com Crashlytics e ciclos de hotfix via TestFlight. Migração progressiva de módulos legados de Objective-C para Swift, reduzindo crashes. e melhorando a qualidade usando arquitetura mvvm e outras como viper.
-A proxima cunsultoria foi Hexacta - Desenvolvedor iOS Sênior — squad Open Finance (Banco Modal) · PJ. Desenvolvimento de módulos iOS nativos com Swift, UIKit, MVVM-C e RxSwift para o projeto de Open Finance do Banco Modal, integrando REST APIs e fluxos de consentimento. O projeto tem alguns padrões. Eles visam manter o projeto legível e manutenível bem como facilitar a entrada de novos desenvolvedores para a equipe. Não adicione novas biliotecas e/ou dependências externas ao Banco. Evite criar dependência de terceiros. O projeto segue o padrão Rx, mais especificamente RxSwift. Evite o uso de callbacks. Eles criam aninhamentos e dificultam o trabalho dos outros desenvolvedores.
-    - O rx pode substituir callbacks na maioria dos casos.
-    - Nos demais, utilize delegates sempre que possível.
-    - Todos os observables de Rx devem ser vinculados a um `DisposeBag()` e desalocados ao fim de sua utilização.
-    - Variáveis de `Disposebag` devem ser privadas e sem qualquer tipo de acesso externo à sua classe original. Ate no momento da finalizacao dos meus servicos nao houve a discussao. No banco modal. fiquei na criacao de UI e nao criacao de build canal. inicia o consentimento na web, deriva para mobile via deepLink. Cruzamento de canal.
-No inicio de janeiro de 2022, houve a comunicacao que o banco modal seria fusao com grupo xp via troca de acoes. em marco/2022. finalizei minha prestacao de servicos PJ.
+## Consórcio Odebrecht + Via Engenharia — Assistente Técnico de TI (Ago/2005 – Dez/2008)
 
-Zup Innovation - mar/2022 – fev/2026 Mobile Developer Specialist — App Bancário (Itaú) · Efetivo CLT
-No inicio da minha jornada como especialista na zup, estava alocado na aquad de prevencao a fraudes, no aplicativo do itauCartoes. Dentro como funcao principal desenvolver e sustentar a correcao de bugs. O projeto esta em estado monolitico, esta squad fui desmembrada para formar a squad na frente de acesso chamada login unificado. onde iniciei o desenvolvimento do zero de um novo modulo desacoplado, nascendo em full viewCode com MVVM-C, testes unitarios. este modulo teria como objetivo viabilizar que os clientes utilizarem o cpf como forma de login nos aplicativos do banco, que neste momento. cada app utilizava login separados. Em 2023, o banco inicio o projeto do One Itau, que seria anunciado ao publico em 2024, neste projeto houve a definicao da criacao de um novo modulo, que permitiria a criacao de senha de acesso, senha transional, fido, geolocalizacao, dispositivo autorizado, validacao de biometria facial. Desenvolvimento de jornadas de segurança e identidade no iOS app do Itaú, usando Swift, UIKit, MVVM-C e ViewCode em arquitetura modular. No inicio houve um ponto de conflito entre uso de webview ou desenvolver nativo. Para apoiar o techlead apoiei na elaboracao de documentacao apresentando a necessidade de usar linguagem nativo, apresentando criterios de seguranca como ponto principal. O modulo nasceu com forte padronizacao de uso de mvvm-c, uso completo de swiftlint, testes unitarios, validacoes de acessibilidade, etapas completas de sonarqube, validacoes com SAST, analise com veracode. 
-Instrumentação de observabilidade com appdynamics e Crashlytics, permitindo alertas proativos e redução  no MTTR de incidentes em produção. cobertura de unit tests (XCTest) de menos de pelo menos 75% no modulo, aplicando TDD e padrões Strategy, Builder e Coordinator. Evolução da CI/CD com inclusao de etapas de codereview automaticas via agente do stackspot, e agente de validacao de WCAG acessibilidade. Uso exautivo de design system do itau. O desenvolvimento deste modulo possibilitou a migracao dos clientes das contas iti, e usuario do app itauCartoes, todos eles passando pelo modulo via aplicatico itau. chanado superApp. atingindo mais de 5 milhoes de clientes. O modulo ate o inicio de 2026, ja estava em preparacao para uma proxima migracao dos usuario do magulu cartoes. O meu dia a dia era desenvolver as feature, efetuar codereview de feature que outro dev tenha trabalhado.  Criar os testes unitarios, efetuar a cracao das versoes para testes manuais dos QAs, e dos testes automatizados. apos a aprovacao das feature. tinha como atividade preparar os docuemntos de gestao de mudancas para avaliacao dos responsavel pela geracao das versoes finais para a loja. e salas de integracao, apos a aprovacao e testes integradas na release final acompanhar a liberacao nas lojas e validar o perfeita integracao. eu, em geral tambem estava responsavel pelo fechamento de versao release do modulo. 
+O consórcio formado pela Construtora Norberto Odebrecht e Via Engenharia era responsável pela implantação do novo sistema aeroportuário de Goiânia (novo terminal de passageiros, pátio de aeronaves, estacionamento e acesso viário).
+
+### Infraestrutura de TI
+
+Responsável pelo suporte a ~50 usuários administrativos do canteiro de obras e pela administração de toda a infraestrutura de TI. O CPD era composto por:
+
+- Servidores Active Directory e servidor de arquivos
+- Link dedicado com roteador Cisco e firewall Juniper
+- Conexão com datacenter em São Paulo
+
+**Atividades principais:**
+- Administração de servidores e rotinas de backup
+- Criação e gestão de GPOs, mapeamento de unidades de rede
+- Criação e manutenção de usuários/grupos no Active Directory
+- Rotinas de atualização de máquinas e verificações de segurança (antivírus centralizado TrendMicro)
+- Manutenção de regras de firewall
+- Administração do sistema de telefonia e implantação de sistema de tarifação de chamadas
+- Aplicação de políticas de segurança corporativa
+- Análise e planejamento de alocação de recursos tecnológicos (TCO / ROI)
+- Gerenciamento da rede com foco em redução de custos de telefonia
+- Criação de procedimentos para segurança, integridade e confidencialidade das informações
+
+### Desenvolvimento de Sistema de Ponto Eletrônico (2006)
+
+Desenvolvimento de sistema de Ponto Eletrônico em **Delphi + Firebird** (arquitetura client/server com DataSnap). O sistema:
+
+- Capturava dados de coletores de dados/portais
+- Analisava marcações e tratava ocorrências (faltas, atrasos, horas extras)
+- Distribuía verbas e gerava relatórios de folha de ponto
+- Gerava arquivos para integração completa com o sistema de Folha de Pagamento
+
+O sistema também incluía um **módulo de acompanhamento e apropriação de serviços**, responsável pela quantificação dos custos da obra, rateio nas UAs corretas, apropriação de serviços de terceirizados e geração de índices de custo para planejamento.
+
+### Integração com SISENG (2007)
+
+Desenvolvimento de integração com o SISENG (sistema de orçamentação, acompanhamento e planejamento em Engenharia Civil). Para viabilizar a integração:
+
+- Criação de WebService de integração
+- Migração do banco de dados de **Firebird para Oracle** (maior escala, alinhando com a base já usada pelo SISENG)
+
+### Apoio a Outras Unidades de Negócio (2008)
+
+Em 2008, início de demanda para apoiar outras unidades nas cidades de São Caetano/SP, Campinas/SP, Dom Pedrito/RS, Natal/RN e Salvador/BA, com o objetivo de treinar os responsáveis locais de TI para manter o padrão corporativo.
+
+**Atividades desenvolvidas nos contratos:**
+- Padronização do ambiente de TI
+- Aplicação de políticas de segurança corporativa
+- Qualificação do recurso de TI local
+- Identificação de recurso local para atuação com TI nos contratos
+- Análise técnica e reestruturação do ambiente de TI
+- Mobilização e logística de telecomunicação
+- Adequação dos recursos tecnológicos para implantação do sistema O2
+
+---
+
+## Construtora Odebrecht (Holding) — Treinamentos e Apoio (Dez/2008 – Fim de 2009)
+
+Em dezembro/2008, saída do consórcio e transferência para a holding Construtora Odebrecht para realizar os treinamentos, mantendo os apoios nas unidades até o final de 2009.
+
+---
+
+## Transição para Desenvolvimento Mobile (2010 – 2017)
+
+### Estudos e Preparação (2010 – 2011)
+
+Acompanhando o surgimento do mercado mobile (iPhone, Android, BlackBerry, Palm OS), início dos estudos de desenvolvimento mobile: **Android com Java** e **iOS com Objective-C**. Neste período, Delphi foi gradualmente deixado de lado em favor de Java, que se mostrava mais alinhado ao mercado corporativo.
+
+### Primeiros Projetos Mobile (2012 – 2013)
+
+**Aplicativo de Rádio Online (2012):**
+Primeiro ciclo completo de desenvolvimento mobile, nas plataformas iOS e Android, com publicação nas lojas. O app oferecia:
+- Transmissão online da emissora de rádio
+- Agenda de comércios locais ("lista telefônica") em parceria com a CDL de Bela Vista de Goiás
+- Banco de dados local (SQLite) com atualização online, filtros por segmento e nome de estabelecimento
+- Arquitetura: **MVP**
+
+**App Interno de Previdência Privada da Odebrecht (2012 – 2013):**
+Participação no desenvolvimento do aplicativo interno de previdência privada para iOS e Android. Arquitetura: **MVP**.
+
+### Adoção do Swift e Foco em iOS (2014 – 2017)
+
+Em 2014, a Apple lançou o Swift. As primeiras versões foram acompanhadas sem adoção imediata, mantendo Objective-C. A partir do **Swift 4 (2017)**, com maior maturidade da linguagem, iniciou-se a adoção, incluindo a criação das primeiras *bridges* entre Objective-C e Swift.
+
+Em **setembro/2017**, deixou-se de atuar com serviços de infraestrutura, passando a focar exclusivamente em desenvolvimento.
+
+---
+
+## MoveJa Tecnologia — Desenvolvedor iOS/Android · PJ (Out/2017 – Jun/2018)
+
+Convite para participar de uma startup de plataforma de transporte particular de passageiros (estilo Uber).
+
+**Missão inicial:** migrar o aplicativo MVP desenvolvido em Cordova/JavaScript para tecnologia nativa (iOS em Swift, Android em Java), para suportar geolocalização, notificações e outros serviços de forma mais eficaz.
+
+**Principais resultados:**
+- Identificação e correção de falhas graves de segurança que permitiam fraudes ("viagens fake") → **redução de 35–40% nas ocorrências** já nas primeiras versões
+- Melhora nas avaliações nas lojas
+- Adoção da arquitetura **MVVM** com inclusão de testes unitários (XCTest), inexistentes na versão inicial
+- Uso de Google Maps + Directions para geolocalização/endereços; estratégia de cache resultou em **redução de até 55% no consumo das APIs do Google**
+
+Entre abril e maio/2018, com alta carga de trabalho e busca por novos talentos para a startup (participação em eventos de tecnologia na Supera Tecnologia), ao final de maio saiu da MoveJa para realizar freelances na Supera, buscando rotina menos estressante.
+
+---
+
+## Supera Tecnologia — Desenvolvedor Full Stack / Mobile · CLT (Ago/2018 – Jul/2020)
+
+Atuação nas plataformas Android e iOS, com maior foco em iOS. A empresa atendia múltiplos clientes, com trabalho predominante em sustentação e correção de bugs.
+
+**Principais projetos:**
+
+- **RMTC Goiânia** — Apps SiMRmtc (Android/iOS) e RMTC Goiânia: localização de ônibus em tempo real, planejamento de rotas, consulta de pontos de recarga Sitpass, alertas de chegada e atendimento virtual.
+- **ValeCard Benefício** — App para usuários de cartões de alimentação, refeição e convênio: desbloqueio de cartões, alteração de senha e busca de estabelecimentos no mapa.
+- **ValeCard Motorista** — App para motoristas que utilizam cartões de abastecimento ValeCard.
+- **ValeCard Bank** — Solução de conta digital da ValeCard.
+- **Rapidili** — App que conecta usuários a distribuidores de bebidas para compra online.
+
+Em jul/2020, encerrou-se o ciclo na Supera. Decisão de focar exclusivamente em iOS, deixando de desenvolver para Android e backend (mantendo acompanhamento do mercado com Kotlin e Java/Spring Boot).
+
+---
+
+## Try Consultoria — Desenvolvedor iOS · PJ Remoto (Jul/2020 – Out/2020)
+
+Contrato com tempo definido. Projeto: **Design System do Banco Santander**.
+
+- Desenvolvimento de componentes UIKit reutilizáveis a partir das definições no Figma
+- Elaboração da documentação de uso dos componentes
+- Criação de biblioteca de componentes com **Swift Package Manager (SPM)**, facilitando reuso em múltiplos projetos
+- Escrita de **unit tests (XCTest)** para garantir consistência visual e comportamental dos componentes no iOS SDK
+
+---
+
+## E-Deploy — Desenvolvedor iOS · App de Consultoras (Natura) · PJ
+
+A E-Deploy é uma empresa brasileira de tecnologia especializada no desenvolvimento de soluções para gestão empresarial com foco em varejo.
+
+- Sustentação e evolução do iOS app Natura para rede de mais de **1 milhão de consultoras**
+- Garantia de estabilidade com **Crashlytics** e ciclos de hotfix via TestFlight
+- Migração progressiva de módulos legados de **Objective-C para Swift**, reduzindo crashes
+- Evolução da qualidade com arquitetura **MVVM** e **VIPER**
+
+---
+
+## Hexacta — Desenvolvedor iOS Sênior · squad Open Finance (Banco Modal) · PJ
+
+Desenvolvimento de módulos iOS nativos para o projeto de Open Finance do Banco Modal.
+
+**Stack e arquitetura:** Swift, UIKit, **MVVM-C**, **RxSwift**, integração com REST APIs e fluxos de consentimento.
+
+**Padrões do projeto:**
+- Sem adição de novas bibliotecas/dependências externas ao banco
+- Padrão **RxSwift** em vez de callbacks (evitar aninhamentos); uso de delegates nos demais casos
+- Todos os observables vinculados a um `DisposeBag()` e desalocados ao fim do uso
+- Variáveis de `DisposeBag` privadas, sem acesso externo à classe original
+
+A atuação foi focada na criação de UI. O fluxo de consentimento iniciava na web e derivava para o mobile via **deepLink** (cruzamento de canal).
+
+Em janeiro/2022, foi comunicada a fusão do Banco Modal com o Grupo XP via troca de ações. Em **março/2022**, finalizou-se a prestação de serviços PJ.
+
+---
+
+## Zup Innovation — Mobile Developer Specialist · App Bancário (Itaú) · CLT (Mar/2022 – Fev/2026)
+
+### Fase 1 – Squad de Prevenção a Fraudes (início em Mar/2022)
+
+Alocado na squad de prevenção a fraudes no app **itauCartões** (projeto em estado monolítico). Função principal: desenvolvimento e sustentação/correção de bugs.
+
+### Fase 2 – Squad Login Unificado
+
+A squad foi desmembrada para formar a frente de acesso "Login Unificado". Desenvolvimento **do zero** de um novo módulo desacoplado:
+
+- **Arquitetura:** ViewCode full + MVVM-C + testes unitários
+- **Objetivo:** permitir que clientes utilizassem o CPF como forma de login único nos aplicativos do banco (cada app utilizava logins separados anteriormente)
+
+### Fase 3 – Projeto One Itaú (2023 – 2026)
+
+Em 2023, o banco iniciou o projeto **One Itaú** (anunciado ao público em 2024). Foi definida a criação de um novo módulo de identidade e segurança, contemplando:
+
+- Criação de senha de acesso e senha transacional
+- FIDO, geolocalização, dispositivo autorizado
+- Validação de biometria facial
+
+**Decisão técnica:** houve conflito inicial entre uso de WebView ou desenvolvimento nativo. Apoio ao tech lead na elaboração de documentação justificando o desenvolvimento nativo, com critérios de segurança como ponto principal.
+
+**Padrões e qualidade do módulo:**
+- MVVM-C, ViewCode, SwiftLint completo
+- Testes unitários com cobertura mínima de 75% (XCTest), aplicando TDD e padrões Strategy, Builder e Coordinator
+- Validações de acessibilidade (WCAG)
+- Etapas completas de SonarQube, SAST e análise com Veracode
+- Uso extensivo do Design System do Itaú
+
+**Observabilidade:**
+- Instrumentação com **AppDynamics** e **Crashlytics**, com alertas proativos e redução no MTTR de incidentes em produção
+
+**CI/CD:**
+- Inclusão de etapas de code review automático via agente StackSpot
+- Agente de validação de acessibilidade WCAG
+
+**Impacto:**
+- O módulo possibilitou a migração dos clientes das contas **iti** e usuários do app **itauCartões** para o superApp Itaú, atingindo mais de **5 milhões de clientes**
+- Em início de 2026, o módulo já estava em preparação para a próxima migração dos usuários do **Magalu Cartões**
+
+**Rotina diária:**
+- Desenvolvimento de features
+- Code review de features de outros devs
+- Criação de testes unitários
+- Geração de versões para testes manuais (QAs) e testes automatizados
+- Elaboração de documentos de gestão de mudanças para aprovação antes das versões de loja
+- Acompanhamento da liberação nas lojas e validação da integração
+- Responsável pelo fechamento de versão (release) do módulo
